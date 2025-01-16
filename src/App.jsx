@@ -1,12 +1,10 @@
-import { useState } from 'react'
+import Example from './Examples'
 import './App.css'
-import Modal from './components/main/modal/Modal'
 
 function App() {
-
   return (
     <>
-      <Modal />
+      <Example />
     </>
   )
 }
