@@ -1,7 +1,7 @@
-import Example from './Examples'
-import './App.css'
+import React from "react";
+import Navbar from "./components/header/navbar";
 
-function App() {
+const App = () => {
   return (
     <>
       <Example />
@@ -9,6 +9,10 @@ function App() {
   )
 }
 
- 
+
+
 export default App
+
+ 
+
 
