@@ -24,7 +24,7 @@ function Example(){
     }
     fetchProduct();
   }, []);
-  //console.log(product);
+  console.log(product);
 
 
 
@@ -69,7 +69,7 @@ function Example(){
     }
     fetchSearch();
   }, []);
-  console.log(search);
+  //console.log(search);
 
 
 
