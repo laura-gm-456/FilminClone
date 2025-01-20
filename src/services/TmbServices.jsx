@@ -28,8 +28,9 @@ async function getData(endpoint, params = {}){
 };
 
 
-export function getProductById(productType, productId) {
-  return getData(`/${productType}/${productId}`);
+export function getProductById(productType, productId, params={}) {
+  
+  return getData(`/${productType}/${productId}`, {append_to_response:params});
 }
 export function getProductsByList(productType, productList) {
   return getData(`/${productType}/${productList}`);
@@ -40,6 +41,5 @@ export function getProductsBySearch(search){
 export function getProductsByTrendy(productType, time='week'){
   return getData(`/trending/${productType}/${time}`);
 }
-
 
   
