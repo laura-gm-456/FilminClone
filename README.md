@@ -71,12 +71,12 @@ Explore the project by visiting the live demo:
 <hr>
 
 ## 👩‍💻 Contributors
-- **Erica Montesinos**  
-- **Grigory Vladimiro**  
-- **Juan Esteban Castro**  
-- **Lanny Rivero**  
-- **Marta Bernardo Zamora**  
-- **Laura Garcia Muro**
+- **Erica Montesinos**:  https://github.com/erikamc99
+- **Grigory Vladimiro**: https://github.com/Grigory-Vladimiro  
+- **Juan Esteban Castro**: https://github.com/juancastro000  
+- **Lanny Rivero**: https://github.com/LannyRivero  
+- **Marta Bernardo Zamora**: https://github.com/MartaBernardoZamora  
+- **Laura Garcia Muro**: https://github.com/laura-gm-456
 
 <br>
 
