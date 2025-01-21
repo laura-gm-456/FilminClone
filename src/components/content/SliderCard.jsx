@@ -1,28 +1,38 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Slider.css'; 
+import './Slider.css';
 
-
-const SliderCard = ({ media }) => {
+const SliderCard = ({ media, isActive, onPlayTrailer }) => {
   return (
     <div
-      className="slider-card"
+      className={`slider-card ${isActive ? 'active' : ''}`}
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original${media.backdrop_path})`,
       }}
     >
+      {/* Capa oscura */}
+      <div className="slider-overlay"></div>
+
+      {/* Contenido superpuesto */}
       <div className="slider-card-content">
-        <p className="slider-badge">{media.media_type === 'movie' ? 'Estreno Exclusivo' : ''}</p>,
+        <div className="tags">
+          {media.media_type === "tv" && (
+            <span className="tag">
+              {media.seasons || 1} TEMPORADA{media.seasons > 1 ? "S" : ""}
+            </span>
+          )}
+          <span className="tag exclusive">ESTRENO EXCLUSIVO</span>
+        </div>
         <h3 className="slider-title">{media.title || media.name}</h3>
-        {media.media_type === 'movie' && (
-          
-          <p className="slider-subtitle">{media.director || 'Director desconocido'}</p>
+        <p className="slider-subtitle">
+          {isActive && media.director ? media.director : "Varios Directores"}
+        </p>
+        {media.media_type === "movie" && (
+          <button className="slider-button" onClick={onPlayTrailer}>
+            VER AHORA
+          </button>
         )}
-        {media.media_type === 'tv' && (
-          <p className="slider-subtitle">{`Temporadas: ${media.seasons}`}</p>
-        )}
-        <button className="slider-button">Ver Ahora</button>
       </div>
     </div>
   );
@@ -38,6 +48,9 @@ SliderCard.propTypes = {
     director: PropTypes.string,
     seasons: PropTypes.number,
   }).isRequired,
+  isActive: PropTypes.bool,
+  onPlayTrailer: PropTypes.func.isRequired, // Marcada como requerida
+
 };
 
 export default SliderCard;
