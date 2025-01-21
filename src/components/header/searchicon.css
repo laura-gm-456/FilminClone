@@ -1,25 +1,30 @@
-.search-icon__image {
-  height: 36px; /* Tamaño del ícono */
-  width: 36px;
+
+.search-icon {
+  position: relative; 
+  height: 32px; 
+  width: 32px;
   cursor: pointer;
-  color: white; /* Color inicial */
+  color: white;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.search-icon__image:hover {
-  color: #02ffa1; /* Cambia el color al pasar el mouse */
+.search-icon:hover {
+  color: #02ffa1;
 }
+
 
 .search-bar {
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 50px; 
+  right: 0; 
   background-color: #141414;
   border: 1px solid #333;
   border-radius: 5px;
   padding: 10px;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
 }
+
 
 .search-bar__input {
   width: 200px;
@@ -29,6 +34,7 @@
   color: white;
   background-color: #1f1f1f;
   border-radius: 5px;
+  font-size: 14px;
 }
 
 .search-bar__input::placeholder {
