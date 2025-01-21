@@ -1,105 +1,6 @@
 import React, { useState } from 'react';
-import { searchContent } from '../../services/TmbServices';
-// import './searcher.css';
-
-/* INTENTO 1
- function Searcher() {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
-  const [isFocused, setIsFocused] = useState(false);
-
-  const handleSearch = async (event) => {
-    const searchQuery = event.target.value;
-    setQuery(searchQuery);
-    if (searchQuery.trim() === '') {
-      setResults([]);
-      return;
-    }
-    try {
-      const searchResults = await searchContent(searchQuery);
-      setResults(searchResults);
-    } catch (error) {
-      console.error('Error al realizar la búsqueda:', error);
-    }
-  };
-
-  return (
-    <div style={{ position: 'relative', width: '100%' }}>
-      <input
-        type="text"
-        value={query}
-        onChange={handleSearch}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setTimeout(() => setIsFocused(false), 200)}
-        placeholder="Buscar por título, género, director o reparto..."
-        style={{
-          width: '100%',
-          padding: '10px',
-          fontSize: '16px',
-          borderRadius: '4px',
-          border: '1px solid #ccc',
-        }}
-      />
-
-      {isFocused && results.length > 0 && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '100%',
-            left: '0',
-            width: '100%',
-            maxHeight: '300px',
-            overflowY: 'auto',
-            background: 'rgba(0, 0, 0, 0.8)',
-            color: 'white',
-            borderRadius: '4px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-            zIndex: '1000',
-          }}
-        >
-          {results.map((item) => (
-            <div
-              key={item.id}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                padding: '10px',
-                borderBottom: '1px solid #444',
-              }}
-            >
-              {item.poster_path || item.profile_path ? (
-                <img
-                  src={`https://image.tmdb.org/t/p/w92${item.poster_path || item.profile_path}`}
-                  alt={item.title || item.name}
-                  style={{ borderRadius: '4px', marginRight: '10px' }}
-                />
-              ) : (
-                <div
-                  style={{
-                    width: '46px',
-                    height: '68px',
-                    background: '#666',
-                    borderRadius: '4px',
-                    marginRight: '10px',
-                  }}
-                />
-              )}
-              <div>
-                <h4 style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>
-                  {item.title || item.name}
-                </h4>
-                <p style={{ margin: 0, fontSize: '12px', color: '#bbb' }}>
-                  {item.media_type === 'movie' ? 'Película' : item.media_type === 'tv' ? 'Serie' : 'Persona'}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}; 
-*/
+import { searchContent } from '../../../services/TmbServices';
+import './Searcher.css';
 
 /* INTENTO 2 
 function Searcher() {
@@ -240,7 +141,7 @@ function Searcher() {
   };
 */
 
-// INTENTO 3 (Sin estilos)
+/* INTENTO 3 (Sin estilos)
 function Searcher() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
@@ -297,6 +198,74 @@ function Searcher() {
     </div>
   );
 }; 
+*/
 
+function Searcher() {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleSearch = async (event) => {
+    const searchQuery = event.target.value;
+    setQuery(searchQuery);
+    if (searchQuery.trim() === '') {
+      setResults([]);
+      return;
+    }
+    try {
+      const searchResults = await searchContent(searchQuery);
+      setResults(searchResults);
+    } catch (error) {
+      console.error('Error al realizar la búsqueda:', error);
+    }
+  };
+
+  return (
+    <div className="searcher-container">
+      <img src="../src/components/header/searcher/buscar.png" alt="lupa" className='search-icon'/><input
+        type="text"
+        value={query}
+        onChange={handleSearch}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setTimeout(() => setIsFocused(false), 200)}
+        placeholder="Buscar por título, género, director o reparto..."
+        className="searcher-input"
+      />
+      {query.trim() !== '' && results.length === 0 && (
+          <span className='no-results'>
+            No se han encontrado resultados
+          </span>
+        )}
+
+      {isFocused && results.length > 0 && (
+        <div className="results-container">
+          {results.map((item) => (
+            <div key={item.id} className="result-item">
+              {item.poster_path || item.profile_path ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w154${item.poster_path || item.profile_path}`}
+                  alt={item.title || item.name}
+                  className="result-image"
+                />
+              ) : (
+                <div className="result-placeholder" />
+              )}
+              <div className="result-text">
+                <h4 className="result-title">{item.title || item.name}</h4>
+                <p className="result-type">
+                  {item.media_type === 'movie'
+                    ? 'Película'
+                    : item.media_type === 'tv'
+                    ? 'Serie'
+                    : 'Persona'}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default Searcher;
