@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -74,3 +72,4 @@ return(
 }
 
 export default Slider;
+
