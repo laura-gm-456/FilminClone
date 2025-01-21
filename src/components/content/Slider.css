@@ -1,0 +1,114 @@
+/* General Slider Container */
+.slider-container {
+  width: 100%;
+  height: 100vh; /* Toma toda la altura de la ventana */
+  position: relative;
+  background-color: #111; /* Fondo oscuro para resaltar el slider */
+  overflow: hidden;
+}
+
+/* Individual Slider Card */
+.slider-card {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Toma toda la altura de la ventana */
+  background-size: cover; /* La imagen cubre todo el espacio */
+  background-position: center; /* Centra la imagen */
+  border-radius: 0; /* Sin bordes redondeados */
+  display: flex;
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  justify-content: flex-end; /* Alinea el contenido al fondo */
+  padding: 40px; /* Espaciado interno para el contenido */
+  color: white;
+}
+
+/* Overlay for Content */
+.slider-card-overlay {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* Badge Styles */
+.slider-badge {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00ff84; /* Color verde del badge */
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Title Styles */
+.slider-title {
+  font-size: 36px; /* Tamaño grande para el título */
+  font-weight: bold;
+  margin: 10px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para resaltar el texto */
+}
+
+/* Subtitle Styles */
+.slider-subtitle {
+  font-size: 18px;
+  color: #ddd; /* Color gris claro */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styles */
+.slider-button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  background-color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.slider-button:hover {
+  background-color: #00ff84;
+  color: #000;
+}
+
+/* Pagination Styles (from Swiper) */
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Navigation Buttons (from Swiper) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #00ff84;
+}
+
+/* Logo Styles for Central Logo */
+.slider-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: bold;
+  color: #00ff84;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}

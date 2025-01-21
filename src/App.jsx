@@ -1,6 +1,6 @@
 
 import './App.css'
-import Slider from './components/main/MediaSlider'
+import Slider from './components/content/Slider'
 
 
 function App() {

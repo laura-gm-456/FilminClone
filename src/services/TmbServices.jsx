@@ -7,7 +7,6 @@ import axios from 'axios';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY; // Asegúrate de tener esta variable en tu archivo .env
 
-console.log(API_KEY)
 // Configuración de Axios
 const ApiClient = axios.create({
   baseURL: BASE_URL, // Establecer la base URL para todas las peticiones
@@ -17,17 +16,33 @@ const ApiClient = axios.create({
   },
 });
 
-// Función para obtener películas populares
-export const getData = async (direction) => {
+// Función para llamar a la api
+async function getData(endpoint, params = {}){
   try {
-    const response = await ApiClient.get(direction); // Llamar al endpoint de películas populares
-
-    return response.data.results; // Devuelve los resultados de las películas populares
+    const response = await ApiClient.get(endpoint, { params }); // Llamar al endpoint de películas populares
+    return response.data; // Devuelve los resultados de las películas populares
   } catch (error) {
-    console.error('Error al obtener películas populares:', error);
+    console.error('Error getData:', error);
     throw error; // Propaga el error para manejarlo en otro lugar si es necesario
   }
 };
 
-export const getPopularMovies = getData('/movie/popular');
+
+export function getProductById(productType, productId, params={}) {
   
+  return getData(`/${productType}/${productId}`, {append_to_response:params});
+}
+export function getProductsByList(productType, productList) {
+  return getData(`/${productType}/${productList}`);
+}
+export function getProductsBySearch(search){
+  return getData('/search/multi', {query:search});
+}
+export function getProductsByTrendy(productType = 'all', time='week'){
+  return getData(`/trending/${productType}/${time}`);
+}
+
+ // Generar URL de imágenes
+export function getImageUrl(path, size = "w500") {
+  return path ? `https://image.tmdb.org/t/p/${size}${path}` : "url_de_imagen_predeterminada";
+} 
