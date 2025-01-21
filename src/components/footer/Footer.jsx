@@ -14,7 +14,6 @@ function Footer() {
         <a href="https://ayuda.filmin.es/es/support/home" target="_blank" rel="noreferrer">Centro de ayuda</a>
         <a href="https://www.filmin.es/aviso-legal" target="_blank" rel="noreferrer">Aviso Legal</a>
         <a href="https://shorturl.at/fKlnU" target="_blank" rel="noreferrer">Prensa</a>
-        <a href="https://comunidadfilmin.com/" target="_blank" rel="noreferrer">¿Quiénes somos?</a>
       </div>
 
       <div className="teamImgContainer">
@@ -42,9 +41,15 @@ function Footer() {
     <hr className="line"/>
       <div className="bottomSection">
        <div className="bottom">
-         <img className="downLogos" src="../src/assets/img/CoEU.png" alt="Europa Creativa" />
-         <img className="downLogos" src="../src/assets/img/GobDeEsp.png" alt="Gobierno de España" />
-         <img className="downLogos" src="../src/assets/img/GenCatDdC.png" alt="Generalitat de Catalunya" /> 
+         <a href="https://culture.ec.europa.eu/" target="_blank" rel="noreferrer">
+           <img className="downLogos" src="../src/assets/img/CoEU.png" alt="Europa Creativa" />
+         </a>
+         <a href="https://www.cultura.gob.es/portada.html" target="_blank" rel="noreferrer">
+           <img className="downLogos" src="../src/assets/img/GobDeEsp.png" alt="Gobierno de España" />
+         </a>
+         <a href="https://cultura.gencat.cat/ca/inici/" target="_blank" rel="noreferrer">
+           <img className="downLogos" src="../src/assets/img/GenCatDdC.png" alt="Generalitat de Catalunya" />
+         </a> 
        </div>
        
       <div className="footerText">
