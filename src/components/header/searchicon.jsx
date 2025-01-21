@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import search_icon1 from "../../images/search_icon1.png";
+import { ReactComponent as SearchIconSVG } from "../../images/search_icon1.svg";
 import "./searchicon.css";
 
 
@@ -12,15 +12,13 @@ const SearchIcon = () => {
 
   return (
     <div className="search-icon">
-      {/* Imagen de búsqueda */}
-      <img 
-        src={search_icon1} 
-        alt="Buscar" 
+      {/* SVG como componente React */}
+      <SearchIconSVG
         className="search-icon__image"
         onClick={toggleSearch}
       />
       
-      {/* Barra de búsqueda visible al hacer clic */}
+      {/* Barra de búsqueda */}
       {isSearchVisible && (
         <div className="search-bar">
           <input
@@ -33,5 +31,6 @@ const SearchIcon = () => {
     </div>
   );
 };
+
 
 export default SearchIcon;

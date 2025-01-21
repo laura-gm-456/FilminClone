@@ -1,28 +1,19 @@
-.search-icon {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; 
-  margin-right: 10px; 
-  position: relative;
-  max-width: 100%; 
-}
-
 .search-icon__image {
-  height: 36px;
+  height: 36px; /* Tamaño del ícono */
+  width: 36px;
   cursor: pointer;
-  margin-top: 8px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: white; /* Color inicial */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .search-icon__image:hover {
-  transform: scale(1.1); 
-  filter: brightness(1.5); 
+  color: #02ffa1; /* Cambia el color al pasar el mouse */
 }
 
 .search-bar {
   position: absolute;
-  top: 60px; 
-  right: 0; 
+  top: 60px;
+  right: 20px;
   background-color: #141414;
   border: 1px solid #333;
   border-radius: 5px;
@@ -42,8 +33,4 @@
 
 .search-bar__input::placeholder {
   color: #888;
-}
-
-.search-bar__input:hover {
-  border: 1px solid #02ffa1; 
 }

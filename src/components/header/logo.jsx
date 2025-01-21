@@ -4,7 +4,7 @@ import logo from "../../images/logo.png"
 const Logo = () => {
   return (
     <div className="navbar__logo">
-      <img src={logo} alt="Logo Filmin" />
+      <img src={logo} alt="Logo Filmin" href="/"/>
     </div>
   );
 };
