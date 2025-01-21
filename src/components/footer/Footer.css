@@ -1,27 +1,58 @@
 .footerContainer {
-    background-color: #060613;
-    display: grid;
-    flex-direction: row;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
     margin: 0;
-    bottom: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+    flex-direction: column;
 }
+
+
+.footerSection {
+    background-color: #060613;
+    color: #93959c;
+    padding: 20px 40px 30px 50px;
+    margin-top: auto; 
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 10px;
+}
+
+
+.line {
+    border: none;
+    height: 1px;
+    background-color: #3e3a3a;
+    margin: 10px 0;
+    width: 100vw;
+    position: relative;
+    left: 0;
+    left: calc(-50vw + 50%);
+    
+}
+
+.upperSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+} 
 
 .upperLinks {
     display: flex;
-    padding: 0px 40px;
     flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 20px;
-    border-top: #93959c;
-    border-bottom: #93959c;
 }
 
 .upperLinks a {
     color: #93959c;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: bold;
     transition: color 0.3s;
 
 }
@@ -30,45 +61,73 @@
     color: #fff;
 }
 
-hr {
-    color: #93959c !important;
-    width: 100%;
-    
-}
-
-.downLogos {
+.teamImgContainer {
     display: flex;
-    padding: 0px 40px;
-    flex-wrap: wrap;
-    color: #93959c;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 10px;
 }
 
-.downLogos img {
-    color: #93959c;
-    max-height: 40px;
-    filter: invert(100%);
-}
-
-.teamButton {
-    margin-left: auto;
-    position: ;
-    padding: 0 40px 10px;
-    color: #93959c;
-    gap: 20px;
+.teamImg {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    object-fit: cover;
+    overflow: hidden;
     border: 2px solid #93959c;
     transition: transform 0.2s ease;
-    margin: 0 0 0.50;
-    padding: 2%;
-    cursor: pointer
-    
+    cursor: pointer;
 }
 
-.teamButton :hover {
-    background-color: #fff;
+.teamImg img {
+   width: 100%;
+   height: 100%; 
+   object-fit: cover; 
+}
+
+.teamImg:hover {
+    transform: scale(1.1);
+    border-color: #fff;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bottom {
+    display: flex;
+    gap: 15px
+}
+
+.downLogos {
+    height: 40px;
+    width: auto;
+    filter: brightness(0.8);
+    transition: filter 0.2s ease;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.downLogos:hover {
+    filter: brightness(1);
+}
+    
+.footerText {
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .upperSection,
+    .bottomSection {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footerText {
+        text-align: center;
+    }
 }
