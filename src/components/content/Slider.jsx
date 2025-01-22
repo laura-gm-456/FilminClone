@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import "swiper/css";
@@ -31,13 +31,13 @@ useEffect(() =>{
   loadMedia();
 },[]);
 
- // Función para manejar el tráiler
+  // Función para manejar el tráiler
  const handlePlayTrailer = (id, mediaType) => {
-  const selectedMedia = mediaItems.find((item) => item.id === id);
-  if (selectedMedia) {
+ const selectedMedia = mediaItems.find((item) => item.id === id);
+   if (selectedMedia) {
     setActiveTrailer({ id, mediaType, director: selectedMedia.director || "Varios Directores" });
-  }
-};
+   }
+ };
 
 // Mientras carga o si hay error, mostramos mensajes adecuados  
 
@@ -59,11 +59,11 @@ return(
     >
       {mediaItems.map((media)=> (
         <SwiperSlide key={media.id}>
-          <SliderCard 
+           <SliderCard 
           media={media}
           isActive={activeTrailer?.id === media.id}
           onPlayTrailer={() => handlePlayTrailer(media.id, media.media_type)}
-          />
+          /> 
         </SwiperSlide>
       )) }
     </Swiper>

@@ -1,7 +1,15 @@
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 /* Contenedor principal del slider */
 .slider-container {
-  width: 100%; /* Asegura que el slider ocupe todo el ancho */
+  width: 100vw; /* Asegura que el slider ocupe todo el ancho */
   height: 95vh; /* Asegura que el slider ocupe toda la altura */
   position: relative;
   background-color: #000; /* Fondo por si la imagen no carga */
@@ -83,7 +91,7 @@
   color: #000;
   background-color: #ffffff;
   padding: 10px 20px;
-  border: none;
+  border: none; 
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
@@ -96,9 +104,12 @@
   background-color: #00ff84;
   color: #000;
 }
-
+ 
 /* Ajuste de Swiper */
 .swiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%; /* Asegura que Swiper ocupe todo el ancho */
   height: 100%; /* Asegura que Swiper ocupe toda la altura */
 }
