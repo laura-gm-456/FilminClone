@@ -20,13 +20,13 @@
 <br>
 <hr>
 
-### ✨ **Project Objective**:  
+## 🎯 **Project Objective**:  
 Filmin is a Spanish online film platform known for its selection of arthouse, independent, and commercial cinema. This project aims to create a functional **Filmin Clone** using **React**, replicating its design and user experience. The result is a responsive, user-friendly web application for searching and exploring movies.
 
 <br> 
 <hr>
 
-### :clapper: **Project Dependencies:**
+## :clapper: **Project Dependencies:**
 
 * **Getting Started**
 
@@ -89,7 +89,7 @@ This will start the development server and open the movie application in your de
 <br>
 <hr>
 
-##  :star: Project Overview  
+## ✨ Project Overview  
 This project is a **responsive movie app** inspired by Filmin, designed to showcase a clean interface and intuitive navigation for movie enthusiasts. Built with **React** and powered by **The Movie Database (TMDb) API**, the app provides users with an immersive experience for exploring detailed movie information.
 
 <br>
@@ -182,7 +182,7 @@ Explore the project by visiting the live demo:
 <br>
 <hr>
 
-## ✨ **Objetivo del Proyecto**:  
+## :dart: **Objetivo del Proyecto**:  
 Filmin es una plataforma española de cine en línea conocida por su selección de cine de autor, independiente y comercial. Este proyecto tiene como objetivo crear un **Clon de Filmin** funcional utilizando **React**, replicando su diseño y experiencia de usuario. El resultado es una aplicación web dinámica y fácil de usar para buscar y explorar películas.
 
 <br>
