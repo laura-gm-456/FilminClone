@@ -88,7 +88,6 @@ This will start the development server and open the movie application in your de
   
 <br>
 <hr>
-<br>
 
 ##  :star: Project Overview  
 This project is a **responsive movie app** inspired by Filmin, designed to showcase a clean interface and intuitive navigation for movie enthusiasts. Built with **React** and powered by **The Movie Database (TMDb) API**, the app provides users with an immersive experience for exploring detailed movie information.
@@ -123,7 +122,6 @@ This project is a **responsive movie app** inspired by Filmin, designed to showc
 <br>
 <hr>
 
-
 ## 🚀 Technologies Used:
 - **React**: For building the user interface.
 - **TMDb API**: For fetching and displaying movie data.
@@ -141,7 +139,6 @@ This project is a **responsive movie app** inspired by Filmin, designed to showc
 <br>
 <hr>
 
-
 ## 🌐 Live Demo:
 Explore the project by visiting the live demo:  
 [**Filmin Clone on GitHub Pages**](#)
@@ -158,9 +155,7 @@ Explore the project by visiting the live demo:
 - **Marta Bernardo Zamora**: [GitHub Profile](https://github.com/MartaBernardoZamora)
 - **Laura Garcia Muro**: [GitHub Profile](https://github.com/laura-gm-456)
 
-  
 <br>
-
 
 ### Feel free to share your observations, feedback, or/and suggestions with us! 
 ### Thank you!✨  
@@ -257,7 +252,6 @@ Esto iniciará el servidor de desarrollo y abrirá la aplicación de películas 
 
 <br>
 <hr>
-<br>
 
 ## ✨ Descripción del Proyecto  
 Este proyecto es una **aplicación de películas** inspirada en Filmin, diseñada para mostrar una interfaz limpia y una navegación intuitiva para los amantes del cine. Construida con **React** y potenciada por la API de **The Movie Database (TMDb)**, la app ofrece a los usuarios una experiencia inmersiva para explorar información detallada de películas.
@@ -294,7 +288,6 @@ Este proyecto es una **aplicación de películas** inspirada en Filmin, diseñad
 - **React**: Para construir la interfaz de usuario.
 - **API de TMDb**: Para obtener y mostrar datos de películas.
 - **CSS**: Para estilos y diseño.
-
 
 <br>
 
