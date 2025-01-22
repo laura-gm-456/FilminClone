@@ -29,11 +29,11 @@ Filmin is a Spanish online film platform known for its selection of arthouse, in
 ### :clapper: **Project Dependencies:**
 
 * **Getting Started**
-
+<br>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
+<br>
 * **Prerequisites**
-
+<br>
 **Git** If you want to clone the project from GitHub and work with it locally, you will need to have **Git** installed on your system. You can download and install Git from the official website (https://git-scm.com/).
 <br>
 **Node.js** Application requires Node.js to be installed on your system in order to run. You can download and install the latest version of Node.js from the official website (https://nodejs.org/).
@@ -45,12 +45,13 @@ Once you have these prerequisites in place, you can proceed to clone the project
 
 
 * **Installing**
-
+<br>
 Make sure you have all the necessary prerequisites installed on your system. Follow the below steps to install the setup the project on your machine:
-
+<br>
 Open a terminal or command prompt and navigate to the directory where you want to clone the project.
 <br>
 Run the following command to clone the project from GitHub: **git clone**  [https://github.com/LannyRivero/FilminClone](https://github.com/LannyRivero/FilminClone).
+<br>
 This will create a new directory called **"FilminClone"** in the current location, containing the code for the movie app project.<br>
 <br>
 Navigate to the project directory by running the following command: **cd FilminClone** 
@@ -60,10 +61,11 @@ Run the following command to install the project's dependencies using npm: **npm
 Start the server: **npm run dev**
 <br>
 To use the movie project, you will need to set up some environment variables on your development machine. Here are the steps to follow:
-
+<br>
 Create a **.env** file in the root of the project.
 <br>
 Add the following variables to the **.env** file, replacing the placeholder values with your own:
+<br>
 VITE_API_KEY= (your-tmdb-api-key) 
 <br>
 VITE_TMDB_API_BASE_URL = [https://developer.themoviedb.org/](https://developer.themoviedb.org/)
@@ -71,6 +73,7 @@ VITE_TMDB_API_BASE_URL = [https://developer.themoviedb.org/](https://developer.t
 Save the **.env** file.
 <br>
 Once the dependencies are installed, you can run the project locally by running the following command: **npm run dev**
+<br>
 This will start the development server and open the movie application in your default web browser.
   
 <br>
@@ -181,13 +184,13 @@ Filmin es una plataforma española de cine en línea conocida por su selección 
 <hr>
 
 ## :clapper: **Dependencias del Proyecto:**
-
+<br>
 * **Inicio**
-
+<br>
 Estas instrucciones te permitirán obtener una copia del proyecto y ejecutarlo en tu máquina localmente para propósitos de desarrollo y pruebas.
-
+<br>
 * **Requisitos Previos**
-
+<br>
 **Git**  
 Si deseas clonar el proyecto desde GitHub y trabajar con él localmente, necesitarás tener **Git** instalado en tu sistema. Puedes descargar e instalar Git desde el sitio oficial: [https://git-scm.com/](https://git-scm.com/).
 <br>
@@ -198,15 +201,16 @@ La aplicación requiere que tengas **Node.js** instalado en tu sistema para ejec
 **npm** es el administrador de paquetes para Node.js y se utiliza para gestionar las dependencias y paquetes necesarios para tu proyecto Next.js. npm se instala automáticamente al instalar Node.js. Para comprobar si npm está instalado en tu sistema, abre una terminal o línea de comandos y ejecuta el siguiente comando: **npm -v**
 <br>
 Una vez que tengas estos requisitos previos instalados, puedes proceder a clonar el proyecto desde GitHub usando Git.
-
+<br>
 
 * **Instalación**
-
+<br>
 Asegúrate de tener todos los requisitos necesarios instalados en tu sistema. Sigue los pasos a continuación para instalar y configurar el proyecto en tu máquina:
-
-1. Abre una terminal o línea de comandos y navega al directorio donde deseas clonar el proyecto.
-
-2. Ejecuta el siguiente comando para clonar el proyecto desde GitHub: **git clone** [https://github.com/LannyRivero/FilminClone](https://github.com/LannyRivero/FilminClone)
+<br>
+Abre una terminal o línea de comandos y navega al directorio donde deseas clonar el proyecto.
+<br>
+Ejecuta el siguiente comando para clonar el proyecto desde GitHub: **git clone** [https://github.com/LannyRivero/FilminClone](https://github.com/LannyRivero/FilminClone)
+<br>
 Esto creará un nuevo directorio llamado **"FilminClone"** en la ubicación actual, que contiene el código para el proyecto de la aplicación de la película.
 <br>
 Navegue hasta el directorio del proyecto ejecutando el siguiente comando:**cd FilminClone**
@@ -218,6 +222,7 @@ Inicie el servidor: **npm run dev**
 Para usar el proyecto de la película, deberá configurar algunas variables de entorno en su máquina de desarrollo. Estos son los pasos a seguir:
 <br>
 Cree un archivo **.env** en la raíz del proyecto.
+<br>
 Agregue las siguientes variables al archivo **.env**, reemplazando los valores del marcador de posición con los suyos:
 <br>
 VITE_API_KEY= (tu-tmdb-api-key)
@@ -227,6 +232,7 @@ VITE_TMDB_API_BASE_URL = [https://developer.themoviedb.org/](https://developer.t
 Guarde el archivo **.env**.
 <br>
 Una vez instaladas las dependencias, puedes ejecutar el proyecto localmente ejecutando el siguiente comando: **npm run dev**
+<br>
 Esto iniciará el servidor de desarrollo y abrirá la aplicación de películas en tu navegador web predeterminado.
 
 
