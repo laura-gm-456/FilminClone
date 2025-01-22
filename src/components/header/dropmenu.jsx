@@ -22,13 +22,12 @@ const DropdownMenu = () => {
         <ul className="dropdown__menu">
           <li><a href="#paginaenconstruccion">Novedades</a></li>
           <li><a href="#paginaenconstruccion">Próximamente</a></li>
-          {/* Opción "The Filmin Times" con clase específica para darle estilo */}
           <li className="the-filmin-times">
-            <a href="https://www.thefilmintimes.com/es/">The Filmin Times</a>
+            <a href="https://www.thefilmintimes.com/es/" target="_blank">The Filmin Times</a>
           </li>
-          <li><a href="#https://www.filmin.es/blog">Blog</a></li>
-          <li><a href="https://prensa.filmin.es/">Prensa</a></li>
-          <li><a href="https://ayuda.filmin.es/es/support/home">Centro de ayuda</a></li>
+          <li><a href="#https://www.filmin.es/blog" target="_blank">Blog</a></li>
+          <li><a href="https://prensa.filmin.es/" target="_blank">Prensa</a></li>
+          <li><a href="https://ayuda.filmin.es/es/support/home" target="_blank">Centro de ayuda</a></li>
         </ul>
       )}
     </div>

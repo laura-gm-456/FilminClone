@@ -1,5 +1,4 @@
 
-/* Estilo general para el dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -16,8 +15,13 @@
   transition: color 0.3s ease;
 }
 
+.dropdown__toggle:hover,
+.dropdown__toggle.active,
+.dropdown__toggle:focus {
+  outline: none; 
+}
 .dropdown__toggle:hover, .dropdown__toggle.active {
-  color: #02ffa1; /* Cambia el color al hacer hover o al estar activo */
+  color: #02ffa1;
 }
 
 /* Menú desplegable */
@@ -31,13 +35,14 @@
   padding: 15px 0; /* Más espacio interno para agrandar el menú */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  width: 250px; /* Aumenta el ancho del menú */
-  min-height: 250px; /* Aumenta la altura del menú */
+  width: 250px; /* Asegura que todo el contenido del menú se ajuste correctamente */
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
 }
 
 /* Opciones del menú */
 .dropdown__menu li {
   list-style: none;
+  margin: 0; /* Elimina márgenes adicionales */
 }
 
 /* Estilo de los enlaces en el menú */
@@ -45,26 +50,27 @@
   color: white;
   text-decoration: none;
   display: block;
-  padding: 15px 20px; /* Más espacio interno para cada enlace */
-  font-size: 16px; /* Tamaño más grande para los enlaces */
+  padding: 15px 20px; /* Espaciado interno uniforme */
+  font-size: 16px;
+  width: 100%; /* El hover cubrirá todo el ancho */
+  box-sizing: border-box; /* Incluye el padding en el ancho */
 }
 
-/* No hay efecto hover en los enlaces */
+/* Elimina cualquier margen o padding sobrante del hover */
 .dropdown__menu a:hover {
-  background-color: #060613; /* Si quieres que haya un fondo oscuro al pasar el mouse */
+  background-color: #060613; /* Fondo al pasar el mouse */
 }
 
 /* Separación especial para "The Filmin Times" */
 .dropdown__menu li.the-filmin-times {
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
-  margin: 10 10px; /* Espaciado adicional arriba y abajo */
+  padding: 5px 0;
+  margin: 10px 0; /* Espaciado adicional arriba y abajo */
 }
 
 /* Opciones de "The Filmin Times" con margen */
 .dropdown__menu li.the-filmin-times a {
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: 15px;
-  margin-right: 15px;
 }
