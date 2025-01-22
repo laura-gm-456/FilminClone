@@ -1,12 +1,15 @@
-import './App.css'
-import Searcher from './components/header/Searcher/Searcher'
+import React from "react";
+import Navbar from "./components/header/navbar";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Searcher />
-    </>
-  )
-}
- 
-export default App
+    <div>
+      <Navbar />
+      <main style={{ marginTop: "60px" }}>
+        {/* Aquí va el resto de la página */}
+      </main>
+    </div>
+  );
+};
+
+export default App;

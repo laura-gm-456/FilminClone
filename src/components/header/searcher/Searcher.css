@@ -1,9 +1,10 @@
 .searcher-container {
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 700px; 
+  z-index: 1000;
 }
 
 .searcher-input {
@@ -12,11 +13,10 @@
   padding: 15px 15px 15px 90px;
   font-size: 25px;
   border: 0.5px solid white;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
   background-color: white;
   color: #333;
   outline: none;
-  box-shadow: 0 0 50px rgba(0,0,0,.15); 
 }
 
 .searcher-input::placeholder {
@@ -26,7 +26,7 @@
 
 .results-container {
   position: absolute;
-  top: 100%;
+  top: 95%;
   left: 0;
   right: 0;
   background-color: white;
@@ -112,14 +112,15 @@
   font-size: 15px;
 }
 
-.search-icon {
+.searcher-icon {
   width: 50px;
   top: 15px;
   display: flex;
   position: absolute;
   padding: 20px;
 }
-
+/*
 #root {
   margin: 0 auto;
 }
+  */
