@@ -87,13 +87,17 @@ html, body {
   color: #000;
   background-color: #ffffff;
   padding: 10px 20px;
-  border: none; 
+  border: none;
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px; /* Espaciado superior entre el subtítulo y el botón */
-  /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);*/ /* Sombra del botón */
+  margin-top: 0; /* Elimina el margen superior */
+  margin-bottom: 20px; /* Agrega un margen inferior para separarlo del borde */
+  /* Sombra del botón */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  position: relative; /* Permite ajustes específicos */
+  top: -20px; /* Ajusta hacia arriba */
 }
 
 .slider-button:hover {

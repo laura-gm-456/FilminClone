@@ -1,36 +1,45 @@
-
-
-import React from 'react';
 import PropTypes from 'prop-types';
 import './Slider.css';
 
-
-const SliderCard = ({ media, isActive, onPlayTrailer }) => {
+const SliderCard = ({ media, onPlayTrailer }) => {
   return (
     <div
-      className={`slider-card ${isActive ? 'active' : ''}`}
+      className="slider-card"
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original${media.backdrop_path})`,
       }}
     >
-      {/* Capa oscura */}
+      {/* Capa oscura para el fondo */}
       <div className="slider-overlay"></div>
 
-      {/* Contenido superpuesto */}
       <div className="slider-card-content">
+        {/* Tags dinámicos */}
         <div className="tags">
-          {media.media_type === "tv" && (
+          {media.media_type === 'tv' && (
             <span className="tag">
-              {media.seasons || 1} TEMPORADA{media.seasons > 1 ? "S" : ""}
+              {media.seasons || 1} TEMPORADA{media.seasons > 1 ? 'S' : ''}
             </span>
           )}
           <span className="tag exclusive">ESTRENO EXCLUSIVO</span>
         </div>
+
+        {/* Título de la película o serie */}
         <h3 className="slider-title">{media.title || media.name}</h3>
+
+        {/* Subtítulo para mostrar el director o temporadas */}
         <p className="slider-subtitle">
-          {isActive && media.director ? media.director : "Varios Directores"}
-        </p>        
-          <button className="slider-button" onClick={onPlayTrailer}> VER AHORA</button>        
+          {media.media_type === 'movie'
+            ? media.director || 'Director desconocido'
+            : `Temporadas: ${media.seasons || 1}`}
+        </p>
+
+        {/* Botón para ver más detalles o el tráiler */}
+        <button
+          className="slider-button"
+          onClick={() => onPlayTrailer(media.id, media.media_type)}
+        >
+          Ver Ahora
+        </button>
       </div>
     </div>
   );
@@ -46,9 +55,7 @@ SliderCard.propTypes = {
     director: PropTypes.string,
     seasons: PropTypes.number,
   }).isRequired,
-  isActive: PropTypes.bool,
-  onPlayTrailer: PropTypes.func.isRequired, // Marcada como requerida
-
+  onPlayTrailer: PropTypes.func.isRequired, // Función requerida para manejar el botón de "Ver Ahora"
 };
 
 export default SliderCard;
