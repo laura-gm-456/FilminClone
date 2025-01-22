@@ -36,7 +36,7 @@ Open a terminal or command prompt and navigate to the directory where you want t
 Run the following command to clone the project from GitHub:
 
 git clone ![](**https://github.com/LannyRivero/FilminClone**)
-This will create a new directory called "FilminClone" in the current location, containing the code for the movie app project.
+This will create a new directory called **"FilminClone"** in the current location, containing the code for the movie app project.
 
 Navigate to the project directory by running the following command:
 
@@ -52,7 +52,7 @@ To use the movie project, you will need to set up some environment variables on 
 Create a **.env** file in the root of the project.
 Add the following variables to the .env file, replacing the placeholder values with your own:
 VITE_API_KEY=<your-tmdb-api-key>
-VITE_TMDB_API_BASE_URL = https://api.themoviedb.org/3
+VITE_TMDB_API_BASE_URL = ![](https://developer.themoviedb.org/)
 
 Save the **.env** file.
 Once the dependencies are installed, you can run the project locally by running the following command:
@@ -180,11 +180,11 @@ Asegúrate de tener todos los requisitos necesarios instalados en tu sistema. Si
 2. Ejecuta el siguiente comando para clonar el proyecto desde GitHub:
 
 git clone ![](**https://github.com/LannyRivero/FilminClone**)
-Esto creará un nuevo directorio llamado "FilminClone" en la ubicación actual, que contiene el código para el proyecto de la aplicación de la película.
+Esto creará un nuevo directorio llamado **"FilminClone"** en la ubicación actual, que contiene el código para el proyecto de la aplicación de la película.
 
 Navegue hasta el directorio del proyecto ejecutando el siguiente comando:
 
-cd FilminClone
+**cd FilminClone**
 Ejecute el siguiente comando para instalar las dependencias del proyecto usando npm:
 
 **npm install**
@@ -195,7 +195,7 @@ Para usar el proyecto de la película, deberá configurar algunas variables de e
 
 Cree un archivo **.env** en la raíz del proyecto.
 Agregue las siguientes variables al archivo .env, reemplazando los valores del marcador de posición con los suyos:
-VITE_API_KEY=<your-tmdb-api-key>
+VITE_API_KEY=![](https://developer.themoviedb.org/)
 VITE_TMDB_API_BASE_URL = https://api.themoviedb.org/3
 
 Guarde el archivo **.env**.
