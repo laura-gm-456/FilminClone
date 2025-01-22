@@ -5,9 +5,9 @@ const Links = () => {
   return (
     <nav className="navbar__links">
       <a href="/">Inicio</a>
-      <a href="/cine">Cine</a>
-      <a href="/series">Series</a>
-      <DropdownMenu/>
+      <a href="#paginaenconstruccion">Cine</a>
+      <a href="#paginaenconstruccion">Series</a>
+      <DropdownMenu />
     </nav>
   );
 };
