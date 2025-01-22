@@ -7,15 +7,15 @@
 
 # 🎥 Filmin Clone: A Movie-App Home Web Page
 
-###Table of Contents:
-1- [Project Objective](#project-objective)
-2- [Project dependencies, prerequisites and installation](#project-dependencies,-prerequisites-and-installation)
-3- [Project Overview: key features and application sections](#project-verview:-key-features-and-application-sections)
-4- [Screenshots](#screenshots)
-5- [Technologies used](#technologies-used)
-6- [Tools used](#tools-used)
-7- [Live demo link](#live-demo-link)
-8- [Contributors](#contributors)
+### Table of Contents:
+- [Project Objective](#project-objective)
+- [Project dependencies, prerequisites and installation](#project-dependencies,-prerequisites-and-installation)
+- [Project Overview: key features and application sections](#project-overview:-key-features-and-application-sections)
+- [Screenshots](#screenshots)
+- [Technologies used](#technologies-used)
+- [Tools used](#tools-used)
+- [Live demo link](#live-demo-link)
+- [Contributors](#contributors)
 
 
 ### **Project Objective**:  
