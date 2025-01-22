@@ -21,7 +21,7 @@
 <hr>
 
 ### ✨ **Project Objective**:  
-Filmin is a Spanish online film platform known for its selection of arthouse, independent, and commercial cinema. This project aims to create a functional **Filmin Clone** using React, replicating its design and user experience. The result is a responsive, user-friendly web application for searching and exploring movies.
+Filmin is a Spanish online film platform known for its selection of arthouse, independent, and commercial cinema. This project aims to create a functional **Filmin Clone** using **React**, replicating its design and user experience. The result is a responsive, user-friendly web application for searching and exploring movies.
 
 <br> 
 <hr>
@@ -183,7 +183,7 @@ Explore the project by visiting the live demo:
 <hr>
 
 ## ✨ **Objetivo del Proyecto**:  
-Filmin es una plataforma española de cine en línea conocida por su selección de cine de autor, independiente y comercial. Este proyecto tiene como objetivo crear un **Clon de Filmin** funcional utilizando React, replicando su diseño y experiencia de usuario. El resultado es una aplicación web receptiva y fácil de usar para buscar y explorar películas.
+Filmin es una plataforma española de cine en línea conocida por su selección de cine de autor, independiente y comercial. Este proyecto tiene como objetivo crear un **Clon de Filmin** funcional utilizando **React**, replicando su diseño y experiencia de usuario. El resultado es una aplicación web dinámica y fácil de usar para buscar y explorar películas.
 
 <br>
 <hr>
@@ -194,6 +194,7 @@ Filmin es una plataforma española de cine en línea conocida por su selección 
 
 Estas instrucciones te permitirán obtener una copia del proyecto y ejecutarlo en tu máquina localmente para propósitos de desarrollo y pruebas.
 <br>
+
 * **Requisitos Previos**
   
 **Git**  
