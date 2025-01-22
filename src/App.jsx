@@ -1,12 +1,15 @@
-import Example from './Examples'
-import './App.css'
+import React from "react";
+import Navbar from "./components/header/navbar";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Example />
-    </>
-  )
-}
- 
-export default App
+    <div>
+      <Navbar />
+      <main style={{ marginTop: "60px" }}>
+        {/* Aquí va el resto de la página */}
+      </main>
+    </div>
+  );
+};
+
+export default App;
