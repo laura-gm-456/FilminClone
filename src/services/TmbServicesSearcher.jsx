@@ -9,4 +9,3 @@ export async function searchContent(query) {
     throw error;
   }
 }
-    

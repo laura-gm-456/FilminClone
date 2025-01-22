@@ -17,7 +17,7 @@ const ApiClient = axios.create({
 });
 
 // Función para llamar a la api
-export async function getData(endpoint, params = {}){
+async function getData(endpoint, params = {}){
   try {
     const response = await ApiClient.get(endpoint, { params }); // Llamar al endpoint de películas populares
     return response.data; // Devuelve los resultados de las películas populares
@@ -28,14 +28,16 @@ export async function getData(endpoint, params = {}){
 };
 
 
-export function getProductById(productType, productId, params={}) {
+function getProductById(productType, productId, params={}) {
   
   return getData(`/${productType}/${productId}`, {append_to_response:params});
 }
-export function getProductsByList(productType, productList) {
+function getProductsByList(productType, productList) {
   return getData(`/${productType}/${productList}`);
 }
 
-export function getProductsByTrendy(productType, time='week'){
+function getProductsByTrendy(productType, time='week'){
   return getData(`/trending/${productType}/${time}`);
 }
+
+export { getData, getProductById, getProductsByList, getProductsByTrendy };
