@@ -50,7 +50,7 @@ Make sure you have all the necessary prerequisites installed on your system. Fol
 
 Open a terminal or command prompt and navigate to the directory where you want to clone the project.
 <br>
-Run the following command to clone the project from GitHub: **git clone**[https://github.com/LannyRivero/FilminClone](https://github.com/LannyRivero/FilminClone).
+Run the following command to clone the project from GitHub: **git clone**  [https://github.com/LannyRivero/FilminClone](https://github.com/LannyRivero/FilminClone).
 This will create a new directory called **"FilminClone"** in the current location, containing the code for the movie app project.<br>
 <br>
 Navigate to the project directory by running the following command: **cd FilminClone** 
@@ -119,11 +119,11 @@ This project is a **responsive movie app** inspired by Filmin, designed to showc
 <br>
 
 ## 🛠️ Tools:
-- Visual Studio Code
-- Git/GitHub
-- Jira: For task management and project collaboration.
-- Figma: for atom designs and mockups.
-- draw.io: for user flow diagram.
+- **Visual Studio Code**
+- **Git/GitHub**
+- **Jira**: For task management and project collaboration.
+- **Figma**: for atom designs and mockups.
+- **draw.io**: for user flow diagram.
 
 <br>
 <hr>
@@ -206,10 +206,7 @@ Asegúrate de tener todos los requisitos necesarios instalados en tu sistema. Si
 
 1. Abre una terminal o línea de comandos y navega al directorio donde deseas clonar el proyecto.
 
-2. Ejecuta el siguiente comando para clonar el proyecto desde GitHub:
-<br>
-
-**git clone** [https://github.com/LannyRivero/FilminClone](https://github.com/LannyRivero/FilminClone)
+2. Ejecuta el siguiente comando para clonar el proyecto desde GitHub: **git clone** [https://github.com/LannyRivero/FilminClone](https://github.com/LannyRivero/FilminClone)
 Esto creará un nuevo directorio llamado **"FilminClone"** en la ubicación actual, que contiene el código para el proyecto de la aplicación de la película.
 <br>
 Navegue hasta el directorio del proyecto ejecutando el siguiente comando:**cd FilminClone**
@@ -275,11 +272,11 @@ Este proyecto es una **aplicación de películas** inspirada en Filmin, diseñad
 <br>
 
 ## 🛠️ Herramientas:
-- Visual Studio Code
-- Git/GitHub
-- Jira: Para gestión de tareas y colaboración en el proyecto.
-- Figma: para diseño de átomos y maquetación.
-- draw.io: para el diagrama de flujo de usuario.
+- **Visual Studio Code**
+- **Git/GitHub**
+- **Jira**: Para gestión de tareas y colaboración en el proyecto.
+- **Figma**: para diseño de átomos y maquetación.
+- **draw.io**: para el diagrama de flujo de usuario.
 
 <br>
 <hr>
