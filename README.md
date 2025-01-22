@@ -63,9 +63,9 @@ To use the movie project, you will need to set up some environment variables on 
 
 Create a **.env** file in the root of the project.
 <br>
-Add the following variables to the .env file, replacing the placeholder values with your own:
+Add the following variables to the **.env** file, replacing the placeholder values with your own:
+VITE_API_KEY= (your-tmdb-api-key) 
 <br>
-VITE_API_KEY= (your-tmdb-api-key)
 VITE_TMDB_API_BASE_URL = [https://developer.themoviedb.org/](https://developer.themoviedb.org/)
 <br>
 Save the **.env** file.
@@ -218,9 +218,10 @@ Inicie el servidor: **npm run dev**
 Para usar el proyecto de la película, deberá configurar algunas variables de entorno en su máquina de desarrollo. Estos son los pasos a seguir:
 <br>
 Cree un archivo **.env** en la raíz del proyecto.
-Agregue las siguientes variables al archivo .env, reemplazando los valores del marcador de posición con los suyos:
+Agregue las siguientes variables al archivo **.env**, reemplazando los valores del marcador de posición con los suyos:
 <br>
 VITE_API_KEY= (tu-tmdb-api-key)
+<br>
 VITE_TMDB_API_BASE_URL = [https://developer.themoviedb.org/](https://developer.themoviedb.org/)
 <br>
 Guarde el archivo **.env**.
