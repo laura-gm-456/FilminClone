@@ -8,22 +8,25 @@
 # 🎥 Filmin Clone: A Movie-App Home Web Page
 
 ### Table of Contents:
-- [Project Objective](#project-objective)
-- [Project dependencies, prerequisites and installation](#project-dependencies,-prerequisites-and-installation)
-- [Project Overview: key features and application sections](#project-overview:-key-features-and-application-sections)
-- [Screenshots](#screenshots)
-- [Technologies used](#technologies-used)
-- [Tools used](#tools-used)
-- [Live demo link](#live-demo-link)
-- [Contributors](#contributors)
+1. [Project Objective](#-project-objective)
+2. [Project dependencies, prerequisites and installation](#project-dependencies,-prerequisites-and-installation)
+3. [Project Overview: key features and application sections](#project-overview,-key-features-and-application-sections) 
+4. [Screenshots](#screenshots) 
+5. [Technologies used](#technologies-used)
+6. [Tools used](#tools-used)<br>
+7. [Live demo link](#live-demo-link)
+8. [Contributors](#-contributors)
 
+<br>
+<hr>
 
-### **Project Objective**:  
+### ✨ **Project Objective**:  
 Filmin is a Spanish online film platform known for its selection of arthouse, independent, and commercial cinema. This project aims to create a functional **Filmin Clone** using React, replicating its design and user experience. The result is a responsive, user-friendly web application for searching and exploring movies.
 
 <br> 
+<hr>
 
-### **Project Dependencies:**
+### :clapper: **Project Dependencies:**
 
 * **Getting Started**
 
@@ -74,7 +77,7 @@ This will start the development server and open the movie application in your de
 <hr>
 
 
-## ✨ Project Overview  
+##  :star: Project Overview  
 This project is a **responsive movie app** inspired by Filmin, designed to showcase a clean interface and intuitive navigation for movie enthusiasts. Built with **React** and powered by **The Movie Database (TMDb) API**, the app provides users with an immersive experience for exploring detailed movie information.
 
 <br>
@@ -275,7 +278,7 @@ Explora el proyecto visitando la demo en vivo:
 <br>
 <hr>
 
-## 👩‍💻 Contribuidores:
+## :woman_technologist: Contribuidores:
 
 - **Erica Montesinos**: [Perfil de GitHub](https://github.com/erikamc99)
 - **Grigory Vladimiro**: [Perfil de GitHub](https://github.com/Grigory-Vladimiro)
