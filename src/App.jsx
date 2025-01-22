@@ -1,6 +1,5 @@
-import Example from './Examples'
 import './App.css'
-import Searcher from './components/header/searcher/searcher'
+import Searcher from './components/header/Searcher/Searcher'
 
 function App() {
   return (
