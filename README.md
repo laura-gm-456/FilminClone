@@ -9,11 +9,11 @@
 
 ### Table of Contents:
 1. [Project Objective](#-project-objective)
-2. [Project dependencies, prerequisites and installation](#-project-dependencies,-prerequisites-and-installation)
-3. [Project Overview: key features and application sections](#-project-overview,-key-features-and-application-sections) 
+2. [Project dependencies, prerequisites and installation](#-project-dependencies-prerequisites-and-installation)
+3. [Project Overview: key features and application sections](#-project-overview-key-features-and-application-sections) 
 4. [Screenshots](#-screenshots) 
 5. [Technologies used](#-technologies-used)
-6. [Tools used](#-tools-used)<br>
+6. [Tools](#-tools)
 7. [Live demo link](#-live-demo-link)
 8. [Contributors](#-contributors)
 
