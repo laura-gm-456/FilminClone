@@ -28,18 +28,16 @@ async function getData(endpoint, params = {}){
 };
 
 
-export function getProductById(productType, productId, params={}) {
+function getProductById(productType, productId, params={}) {
   
   return getData(`/${productType}/${productId}`, {append_to_response:params});
 }
-export function getProductsByList(productType, productList) {
+function getProductsByList(productType, productList) {
   return getData(`/${productType}/${productList}`);
 }
-export function getProductsBySearch(search){
-  return getData('/search/multi', {query:search});
-}
-export function getProductsByTrendy(productType, time='week'){
+
+function getProductsByTrendy(productType, time='week'){
   return getData(`/trending/${productType}/${time}`);
 }
 
-  
+export { getData, getProductById, getProductsByList, getProductsByTrendy };
