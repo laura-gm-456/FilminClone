@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+// Combinación de funcionalidades para el Slider
+import { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import "swiper/css";
@@ -9,68 +10,92 @@ import SliderCard from './SliderCard';
 
 import './Slider.css';
 
-
 function Slider() {
   const [mediaItems, setMediaItems] = useState([]);
-  const [loading, setLoading] =useState(true);
-  const [error, setError] =useState(null);
-  const [activeTrailer, setActiveTrailer] = useState(null); 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [activeTrailer, setActiveTrailer] = useState(null); // Controla el tráiler activo
+  const swiperRef = useRef(null);
 
-useEffect(() =>{
-  async function loadMedia() {
-    try{
-      const mediaData = await fetchMedia();
-      setMediaItems(mediaData);
-    } catch(err){
-      console.error('Error fetching media:', err);
-      setError('Error al cargar  los datos. Por favor, intenta  de nuevo.');
-    } finally{
-      setLoading(false);
+  useEffect(() => {
+    async function loadMedia() {
+      try {
+        const mediaData = await fetchMedia();
+        setMediaItems(mediaData);
+      } catch (err) {
+        console.error('Error fetching media:', err);
+        setError('Error al cargar los datos. Por favor, intenta de nuevo.');
+      } finally {
+        setLoading(false);
+      }
     }
-    
-  }
-  loadMedia();
-},[]);
+    loadMedia();
+  }, []);
 
-  // Función para manejar el tráiler
- const handlePlayTrailer = (id, mediaType) => {
- const selectedMedia = mediaItems.find((item) => item.id === id);
-   if (selectedMedia) {
-    setActiveTrailer({ id, mediaType, director: selectedMedia.director || "Varios Directores" });
-   }
- };
+  // Maneja el cambio de slide
+  const handleSlideChange = (swiper) => {
+    const currentIndex = swiper.activeIndex;
+    const currentMedia = mediaItems[currentIndex];
 
-// Mientras carga o si hay error, mostramos mensajes adecuados  
+    if (currentMedia) {
+      setActiveTrailer({ id: currentMedia.id, videoId: currentMedia.trailerKey });
+      console.log('Slide activo:', currentMedia.title || currentMedia.name);
 
-if(loading) return <p>Cargando datos...</p>;
-if(error) return <p>{error}</p>;
+      // Detén el autoplay tan pronto como el slide cambie
+      if (swiperRef.current?.autoplay) {
+        swiperRef.current.autoplay.stop();
+      }
+    }
+  };
 
-return(
-  <div className="slider-container">
-    <Swiper
-    modules={[Navigation, Pagination, Autoplay]}
-    navigation 
-    pagination ={{clickable: true}}
-    autoplay = {{
-      delay: 3000,
-      disableOnInteraction: false,
-    }}
-    loop={mediaItems.length > 1} // Solo activa el loop si hay más de un slide    
-    slidesPerView={1}    
-    >
-      {mediaItems.map((media)=> (
-        <SwiperSlide key={media.id}>
-           <SliderCard 
-          media={media}
-          isActive={activeTrailer?.id === media.id}
-          onPlayTrailer={() => handlePlayTrailer(media.id, media.media_type)}
-          /> 
-        </SwiperSlide>
-      )) }
-    </Swiper>
-  </div>
- );
+  const handlePlayTrailer = (id, mediaType) => {
+    const selectedMedia = mediaItems.find((item) => item.id === id);
+    if (selectedMedia) {
+      setActiveTrailer({ id, mediaType, director: selectedMedia.director || "Varios Directores" });
+    }
+  };
+
+  const handleTrailerEnd = () => {
+    if (swiperRef.current) {
+      console.log('Tráiler finalizado, pasando al siguiente slide.');
+      swiperRef.current.slideNext(); // Cambia al siguiente slide automáticamente
+      swiperRef.current.autoplay.start(); // Reanuda el autoplay después del tráiler
+    }
+  };
+
+  if (loading) return <p>Cargando datos...</p>;
+  if (error) return <p>{error}</p>;
+
+  return (
+    <div className="slider-container">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 10000, // El slider espera más tiempo entre slides
+          disableOnInteraction: false,
+        }}
+        loop={mediaItems.length > 1}
+        slidesPerView={1}
+        onSwiper={(swiper) => (swiperRef.current = swiper)} // Guarda la instancia de Swiper
+        onSlideChange={handleSlideChange} // Detiene el autoplay al cambiar el slide
+      >
+        {mediaItems.map((media) => (
+          <SwiperSlide key={media.id}>
+            <SliderCard
+              media={media}
+              isActive={activeTrailer?.id === media.id}
+              onPlayTrailer={() => handlePlayTrailer(media.id, media.media_type)}
+              onTrailerEnd={handleTrailerEnd} // Cambia al siguiente slide al finalizar el tráiler
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 }
 
 export default Slider;
+
 

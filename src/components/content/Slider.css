@@ -6,7 +6,6 @@ html, body {
   width: 100%;
   overflow: hidden;
 }
-
 /* Contenedor principal del slider */
 .slider-container {
   width: 100vw; /* Asegura que el slider ocupe todo el ancho */
@@ -15,6 +14,19 @@ html, body {
   background-color: #000; /* Fondo por si la imagen no carga */
   justify-content: flex-start;
 }
+.trailer-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Fondo negro mientras carga el video */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
 /* Tarjeta del slider */
 .slider-card { 
   height: 100%; /* Asegura que cada tarjeta cubra toda la altura */
@@ -23,8 +35,10 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Coloca el contenido en la parte inferior */
-  padding: 0 40px 120px; /* Espaciado interno del contenido */
+  
   color: white;
+  position: relative;
+  z-index: 1;
 
 }
 
@@ -34,16 +48,19 @@ html, body {
   width: 100%; /* Cubre todo el ancho */
   height: 100%; /* Cubre toda la altura */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /* Gradiente oscuro */
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Contenido de la tarjeta */
 .slider-card-content {
   position: relative;
-  z-index: 2; /* Asegura que el contenido esté sobre el overlay */
+  z-index: 3; /* Asegura que el contenido esté sobre el overlay */
   max-width: 600px; /* Limita el ancho del contenido */
   text-align: left; /* Alinea el contenido a la izquierda */
+  transition: opacity 0.3s ease;
+  opacity: 1; /* Mantén siempre visible */
 }
+
 /* Cartel "ESTRENO EXCLUSIVO" */
 .tag.exclusive {
   background-color: #00ff84; /* Color verde del cartel */
@@ -67,19 +84,16 @@ html, body {
 /* Título del slider */
 .slider-title {
   font-size: 3rem;
-  font-weight: bold;
- 
+  font-weight: bold; 
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* Subtítulo */
 .slider-subtitle {
   font-size: 1.5rem;
-  color: #93959c;
-  
+  color: #93959c;  
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-
 /* Botón de acción */
 .slider-button {
   font-size: 1.5rem;
@@ -125,19 +139,16 @@ html, body {
   opacity: 1;
 }
 
-/* Navigation Buttons (from Swiper) */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #ffffff;
-  font-size: 20px;
-  transition: color 0.3s;
+/* Pagination Styles (from Swiper) */
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+  opacity: 0.5;
+  transition: opacity 0.3s;
 }
-
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: #02ffa1;
 }
-
 /* Logo Styles for Central Logo */
 .slider-logo {
   position: absolute;
@@ -149,3 +160,41 @@ html, body {
   color: #02ffa1;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
+
+
+
+.react-player {
+  width: 100% !important; /* Asegura que el reproductor ocupe todo el ancho */
+  height: 100% !important; /* Asegura que el reproductor ocupe toda la altura */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,7 @@
+// Combinación de códigos: Slider con tráiler integrado y configuraciones dinámicas
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 import './Slider.css';
 
 // Función para renderizar las etiquetas dinámicas
@@ -23,52 +26,102 @@ function Subtitle({ media }) {
   return null; // No mostrar subtítulo para TV
 }
 
-// Componente principal de la tarjeta
-function SliderCard({ media, onPlayTrailer }) {
+function SliderCard({ media, isActive, onPlayTrailer, onTrailerEnd }) {
+  const [showTrailer, setShowTrailer] = useState(false); // Controla si se muestra el tráiler
+  const TRAILER_DURATION = 50; // Tiempo en segundos para mostrar el tráiler
+
+  useEffect(() => {
+    if (isActive) {
+      console.log('Slide activo:', media.title || media.name);
+
+      const timer = setTimeout(() => {
+        setShowTrailer(true); // Cambia a tráiler después de 3 segundos
+        onPlayTrailer(); // Detiene el autoplay del slider
+      }, 5000); // Tiempo para mostrar el póster antes de iniciar el tráiler
+
+      return () => {
+        clearTimeout(timer); // Limpia el temporizador si cambia el slide
+        console.log('Limpieza del temporizador para:', media.title || media.name);
+      };
+    } else {
+      setShowTrailer(false); // Reinicia a la imagen si el slide no está activo
+      console.log('Reiniciando a la imagen para:', media.title || media.name);
+    }
+  }, [isActive, media, onPlayTrailer]);
+
   return (
+    
     <div
       className="slider-card"
       style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/original${media.backdrop_path})`,
+        backgroundImage: !showTrailer
+          ? `url(https://image.tmdb.org/t/p/original${media.backdrop_path})`
+          : 'none', // Muestra el fondo solo si no se está reproduciendo el tráiler
       }}
     >
       {/* Capa oscura para el fondo */}
       <div className="slider-overlay"></div>
 
-      <div className="slider-card-content">
+      <div className="slider-content">
         {/* Renderiza los tags */}
         <Tags media={media} />
 
-        {/* Título de la película o serie */}
+        {/* Título y subtítulo superpuestos */}
         <h3 className="slider-title">{media.title || media.name}</h3>
-
-        {/* Renderiza el subtítulo dinámico */}
         <Subtitle media={media} />
 
-        {/* Botón para ver más detalles o el tráiler */}
-        <button
-          className="slider-button"
-          onClick={() => onPlayTrailer(media.id, media.media_type)}
-        >
-          Ver Ahora
-        </button>
+        {showTrailer ? (
+          <div className="trailer-container">
+            <ReactPlayer
+              className="react-player"
+              url={`https://www.youtube.com/watch?v=${media.trailerKey}`}
+              playing={isActive}
+              controls={true} // Mostrar controles del reproductor
+              width="100%"
+              height="100%"
+              config={{
+                youtube: {
+                  playerVars: {
+                    autoplay: 1,
+                    modestbranding: 1,
+                    rel: 0,
+                    showinfo: 0,
+                  },
+                },
+              }}
+              onProgress={({ playedSeconds }) => {
+                if (playedSeconds >= TRAILER_DURATION) {
+                  console.log(`Tráiler interrumpido después de ${TRAILER_DURATION} segundos`);
+                  onTrailerEnd(); // Cambia al siguiente slide después del tiempo especificado
+                }
+              }}
+              onEnded={onTrailerEnd} // Cambia al siguiente slide si termina el tráiler completo
+            />
+          </div>
+        ) : null}
+
+        {/* Botón para ver más detalles */}
+        <button className="slider-button"> Ver Ahora </button>
+        
       </div>
     </div>
   );
 }
 
-// Validación de propiedades con PropTypes
 SliderCard.propTypes = {
   media: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string,
     name: PropTypes.string,
     backdrop_path: PropTypes.string.isRequired,
-    media_type: PropTypes.oneOf(['movie', 'tv']).isRequired,
+    trailerKey: PropTypes.string,
     director: PropTypes.string,
     seasons: PropTypes.number,
+    media_type: PropTypes.oneOf(['movie', 'tv']).isRequired,
   }).isRequired,
+  isActive: PropTypes.bool.isRequired,
   onPlayTrailer: PropTypes.func.isRequired,
+  onTrailerEnd: PropTypes.func.isRequired,
 };
 
 Tags.propTypes = {

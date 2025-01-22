@@ -1,5 +1,4 @@
 // Obtiene las listas de las peliculas y series populares de la Api
-
 import { getProductsByTrendy, getProductById } from './TmbServices'; 
 
 export async function fetchMedia() {
@@ -12,20 +11,30 @@ export async function fetchMedia() {
 
   const detailedMedia = await Promise.all(
     combinedMedia.map(async (media) => {
+      let additionalData = {};
+
       if (media.media_type === 'movie') {
-        const details = await getProductById('movie', media.id, 'credits');
-        return {
-          ...media,
-          director: details.credits.crew.find((person) => person.job === 'Director')?.name,
-        };
+        const details = await getProductById('movie', media.id, 'credits,videos');
+        additionalData.director = details.credits.crew.find(
+          (person) => person.job === 'Director'
+        )?.name;
+
+        // Obtener el tráiler
+        const trailer = details.videos.results.find((video) => video.type === 'Trailer');
+        additionalData.trailerKey = trailer ? trailer.key : null;
       } else if (media.media_type === 'tv') {
-        const details = await getProductById('tv', media.id);
-        return {
-          ...media,
-          seasons: details.number_of_seasons,
-        };
+        const details = await getProductById('tv', media.id, 'videos');
+        additionalData.seasons = details.number_of_seasons;
+
+        // Obtener el tráiler
+        const trailer = details.videos.results.find((video) => video.type === 'Trailer');
+        additionalData.trailerKey = trailer ? trailer.key : null;
       }
-      return media;
+
+      return {
+        ...media,
+        ...additionalData,
+      };
     })
   );
 
