@@ -171,7 +171,7 @@ La aplicación requiere que tengas **Node.js** instalado en tu sistema para ejec
 Una vez que tengas estos requisitos previos instalados, puedes proceder a clonar el proyecto desde GitHub usando Git.
 
 
-### **Instalación**
+* **Instalación**
 
 Asegúrate de tener todos los requisitos necesarios instalados en tu sistema. Sigue los pasos a continuación para instalar y configurar el proyecto en tu máquina:
 
