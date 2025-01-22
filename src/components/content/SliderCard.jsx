@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Slider.css';
 
+
 const SliderCard = ({ media, isActive, onPlayTrailer }) => {
   return (
     <div
@@ -28,12 +29,8 @@ const SliderCard = ({ media, isActive, onPlayTrailer }) => {
         <h3 className="slider-title">{media.title || media.name}</h3>
         <p className="slider-subtitle">
           {isActive && media.director ? media.director : "Varios Directores"}
-        </p>
-        {media.media_type === "movie" && (
-          <button className="slider-button" onClick={onPlayTrailer}>
-            VER AHORA
-          </button>
-        )}
+        </p>        
+          <button className="slider-button" onClick={onPlayTrailer}> VER AHORA</button>        
       </div>
     </div>
   );

@@ -16,9 +16,7 @@ html, body {
   justify-content: flex-start;
 }
 /* Tarjeta del slider */
-.slider-card {
-  position: absolute;
-  width: 100%; /* Asegura que cada tarjeta cubra todo el ancho */
+.slider-card { 
   height: 100%; /* Asegura que cada tarjeta cubra toda la altura */
   background-size: cover; /* Ajusta la imagen para cubrir el área */
   background-position: center; /* Centra la imagen dentro de la tarjeta */
@@ -33,8 +31,6 @@ html, body {
 /* Capa oscura del slider */
 .slider-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%; /* Cubre todo el ancho */
   height: 100%; /* Cubre toda la altura */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /* Gradiente oscuro */
@@ -97,7 +93,7 @@ html, body {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 10px; /* Espaciado superior entre el subtítulo y el botón */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra del botón */
+  /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);*/ /* Sombra del botón */
 }
 
 .slider-button:hover {

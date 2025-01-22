@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { fetchMedia } from '../../services/TmbServicesMedia';
 import SliderCard from './SliderCard';
+
 import './Slider.css';
 
 

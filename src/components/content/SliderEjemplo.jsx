@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getProductsByTrendy, getProductById } from '../../services/TmbServices';
 import './Slider.css';
 import PropTypes from 'prop-types';
