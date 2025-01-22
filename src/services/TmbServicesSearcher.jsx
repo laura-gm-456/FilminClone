@@ -1,17 +1,12 @@
-import { getProductsBySearch } from "./TmbServices";
+import { getData } from './TmbServices';
 
-// Cambiar el apiClient por getProductsBySearch
-export const searchContent = async (query) => {
-    try {
-      const response = await ApiClient.get('/search/multi', {
-        params: {
-          query,
-        },
-      });
-      return response.data.results; 
-    } catch (error) {
-      console.error('Error al buscar contenido:', error);
-      throw error;
-    }
-  };
+export async function searchContent(query) {
+  try {
+    const data = await getData('/search/multi', { query });
+    return data.results;
+  } catch (error) {
+    console.error('No hay resultados para esta búsqueda', error);
+    throw error;
+  }
+}
     
