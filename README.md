@@ -9,12 +9,12 @@
 
 ### Table of Contents:
 1. [Project Objective](#-project-objective)
-2. [Project dependencies, prerequisites and installation](#project-dependencies,-prerequisites-and-installation)
-3. [Project Overview: key features and application sections](#project-overview,-key-features-and-application-sections) 
-4. [Screenshots](#screenshots) 
-5. [Technologies used](#technologies-used)
-6. [Tools used](#tools-used)<br>
-7. [Live demo link](#live-demo-link)
+2. [Project dependencies, prerequisites and installation](#-project-dependencies,-prerequisites-and-installation)
+3. [Project Overview: key features and application sections](#-project-overview,-key-features-and-application-sections) 
+4. [Screenshots](#-screenshots) 
+5. [Technologies used](#-technologies-used)
+6. [Tools used](#-tools-used)<br>
+7. [Live demo link](#-live-demo-link)
 8. [Contributors](#-contributors)
 
 <br>
@@ -161,10 +161,26 @@ Explore the project by visiting the live demo:
 
 # 🎥 Filmin Clone: Página Principal de una App de Películas
 
-### **Objetivo del Proyecto**:  
+### Contenido:
+1. [Objetivo del Proyecto](#-objetivo-del-proyecto)
+2. [Dependencias del proyecto, requisitos previos e instalacón](#-dependencias-del-proyecto-requisitos-previos-e-instalación)
+3. [Descripción del proyecto, características principales y secciones de la applicación](#-descripción-del-proyecto-características-principales-y-secciones-de-la-applicación) 
+4. [Capturas de pantalla](#-capturas-de-pantalla) 
+5. [Tecnologías utilizadas](#-tecnologías-utilizadas)
+6. [Herramientas](#-herramientas)
+7. [Demo](#-demo)
+8. [Contribuidores](#-contribuidores)
+
+<br>
+<hr>
+
+## ✨ **Objetivo del Proyecto**:  
 Filmin es una plataforma española de cine en línea conocida por su selección de cine de autor, independiente y comercial. Este proyecto tiene como objetivo crear un **Clon de Filmin** funcional utilizando React, replicando su diseño y experiencia de usuario. El resultado es una aplicación web receptiva y fácil de usar para buscar y explorar películas.
 
-### **Dependencias del Proyecto:**
+<br>
+<hr>
+
+## :clapper: **Dependencias del Proyecto:**
 
 * **Inicio**
 
@@ -196,14 +212,11 @@ Asegúrate de tener todos los requisitos necesarios instalados en tu sistema. Si
 **git clone** [https://github.com/LannyRivero/FilminClone](https://github.com/LannyRivero/FilminClone)
 Esto creará un nuevo directorio llamado **"FilminClone"** en la ubicación actual, que contiene el código para el proyecto de la aplicación de la película.
 <br>
-Navegue hasta el directorio del proyecto ejecutando el siguiente comando:
-**cd FilminClone**
+Navegue hasta el directorio del proyecto ejecutando el siguiente comando:**cd FilminClone**
 <br>
-Ejecute el siguiente comando para instalar las dependencias del proyecto usando npm:
-**npm install**
+Ejecute el siguiente comando para instalar las dependencias del proyecto usando npm: **npm install**
 <br>
-Inicie el servidor:
-**npm run dev**
+Inicie el servidor: **npm run dev**
 <br>
 Para usar el proyecto de la película, deberá configurar algunas variables de entorno en su máquina de desarrollo. Estos son los pasos a seguir:
 <br>
@@ -247,7 +260,7 @@ Este proyecto es una **aplicación de películas** inspirada en Filmin, diseñad
 <br>
 <hr>
 
-## 📸 Captura de Pantalla
+## 📸 Capturas de Pantalla
 *(Agrega aquí una captura de pantalla de la aplicación o página web como referencia visual)*
 
 <br>
