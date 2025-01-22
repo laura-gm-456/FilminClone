@@ -17,7 +17,7 @@
 
 /* Efecto cuando el navbar se hace "scrolled" */
 .navbar.scrolled {
-  background-color: rgba(6, 6, 6, 0.7); /* Fondo oscuro y semi-transparente */
+  background-color: #060613; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para el navbar */
 }
 
