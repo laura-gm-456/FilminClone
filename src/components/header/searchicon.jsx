@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./searchicon.css";
+import Searcher from "./searcher/Searcher";
 
 const SearchIcon = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -21,14 +22,11 @@ const SearchIcon = () => {
       <circle cx="10" cy="10" r="7" stroke="currentColor" fill="none" strokeWidth="2" />
       <line x1="20" y1="20" x2="14.65" y2="14.65" stroke="currentColor" strokeWidth="2" />
     </svg>
+      {isSearchVisible &&
+        <div className="overlay" onClick={toggleSearch}>
+        </div>}
       {isSearchVisible && (
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Buscar..."
-            className="search-bar__input"
-          />
-        </div>
+        <Searcher />
       )}
     </div>
   );
