@@ -87,3 +87,4 @@ Subtitle.propTypes = {
 };
 
 export default SliderCard;
+
