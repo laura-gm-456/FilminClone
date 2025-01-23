@@ -33,10 +33,10 @@ function Searcher() {
       if (genres[searchQuery]) {
         const genreId = genres[searchQuery];
         const movieResults = await searchByGenre(genreId, 'movie');
-        const tvResults = await searchByGenre(genreId, 'tv');
+        const seriesResults = await searchByGenre(genreId, 'tv');
         const combinedResults = [
           ...movieResults.map((item) => ({ ...item, media_type: 'movie' })),
-          ...tvResults.map((item) => ({ ...item, media_type: 'tv' })),
+          ...seriesResults.map((item) => ({ ...item, media_type: 'tv' })),
         ];
 
         setResults(combinedResults);

@@ -3,9 +3,9 @@ import { getData } from './TmbServices';
 async function getAllGenres() {
   try {
     const movieGenres = await getData('/genre/movie/list');
-    const tvGenres = await getData('/genre/tv/list');
+    const seriesGenres = await getData('/genre/tv/list');
 
-    const combinedGenres = [...movieGenres.genres, ...tvGenres.genres];
+    const combinedGenres = [...movieGenres.genres, ...seriesGenres.genres];
     const uniqueGenres = {};
 
     combinedGenres.forEach((genre) => {
