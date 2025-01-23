@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { searchContent, getAllGenres, searchByGenre } from '../../../services/TmbServicesSearcher';
 import './Searcher.css';
+import search from "../../../assets/img/search.png";
 
 function Searcher() {
   const [query, setQuery] = useState('');
@@ -51,7 +52,7 @@ function Searcher() {
 
   return (
     <div className="searcher-container">
-      <img src="../src/images/search.png" alt="lupa" className="searcher-icon" />
+      <img src={search} alt="lupa" className="searcher-icon" />
       <input
         type="text"
         value={query}
