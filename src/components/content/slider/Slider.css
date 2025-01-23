@@ -1,7 +1,6 @@
 
 /* Contenedor principal del slider */
 .slider-container {
-  /*width: 100vw; /* Asegura que el slider ocupe todo el ancho */
   height: 95vh; /* Asegura que el slider ocupe toda la altura */
   position: relative;
   background-color: #000; /* Fondo por si la imagen no carga */
@@ -15,8 +14,7 @@
   background-position: center; /* Centra la imagen dentro de la tarjeta */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Coloca el contenido en la parte inferior */
-  
+  justify-content: flex-end; /* Coloca el contenido en la parte inferior */  
   color: white;
   position: relative;
   z-index: 1;
