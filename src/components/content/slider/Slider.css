@@ -1,11 +1,4 @@
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
 /* Contenedor principal del slider */
 .slider-container {
   width: 100vw; /* Asegura que el slider ocupe todo el ancho */
@@ -13,6 +6,7 @@ html, body {
   position: relative;
   background-color: #000; /* Fondo por si la imagen no carga */
   justify-content: flex-start;
+  overflow: hidden;
 }
 .trailer-container {
   position: absolute;
@@ -115,7 +109,7 @@ html, body {
 }
 
 .slider-button:hover {
-  background-color: #02ffa1;
+  background-color: #93959c;
   color: #000;
 }
  

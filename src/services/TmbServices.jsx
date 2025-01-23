@@ -28,21 +28,21 @@ async function getData(endpoint, params = {}){
 };
 
 
-export function getProductById(productType, productId, params={}) {
-  
+function getProductById(productType, productId, params={}) {  
   return getData(`/${productType}/${productId}`, {append_to_response:params});
 }
-export function getProductsByList(productType, productList) {
+
+function getProductsByList(productType, productList) {
   return getData(`/${productType}/${productList}`);
 }
-export function getProductsBySearch(search){
-  return getData('/search/multi', {query:search});
-}
-export function getProductsByTrendy(productType = 'all', time='week'){
-  return getData(`/trending/${productType}/${time}`);
-}
+
+function getProductsByTrendy(productType = 'all', time='week'){
+  return getData(`/trending/${productType}/${time}`);}
+
 
  // Generar URL de imágenes
-export function getImageUrl(path, size = "w500") {
+function getImageUrl(path, size = "w500") {
   return path ? `https://image.tmdb.org/t/p/${size}${path}` : "url_de_imagen_predeterminada";
 } 
+
+export { getData, getProductById, getProductsByList, getProductsByTrendy, getImageUrl };

@@ -1,20 +1,18 @@
-
 import './App.css'
-import Slider from './components/content/Slider'
-
+import Footer from './components/footer/Footer'
+import Navbar from "./components/header/navbar";
+import Content from './components/content/Content'; 
 
 function App() {
-  return (
+    return (
     <>
-    <header>
-        
-      </header>
-      <main>
-        <Slider/>
-      </main>
-    
+    <Navbar />
+    <Content />
+    <Footer />
     </>
   )
-}
- 
-export default App
+};
+
+
+
+export default App;
