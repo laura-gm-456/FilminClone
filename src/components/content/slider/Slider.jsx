@@ -14,7 +14,7 @@ function Slider() {
   const [mediaItems, setMediaItems] = useState([]);
   const [loading, setLoading] =useState(true);
   const [error, setError] =useState(null);
-  const [activeTrailer, setActiveTrailer] = useState(null); 
+
 
 useEffect(() =>{
   async function loadMedia() {
@@ -46,7 +46,7 @@ return(
     navigation 
     pagination ={{clickable: true}}
     autoplay = {{
-      delay: 300000,
+      delay: 3000,
       disableOnInteraction: false,
     }}
     loop={mediaItems.length > 1} // Solo activa el loop si hay más de un slide    
@@ -55,8 +55,7 @@ return(
       {mediaItems.map((media)=> (
         <SwiperSlide key={media.id}>
           <SliderCard 
-          media={media}
-          isActive={activeTrailer?.id === media.id}          
+          media={media}              
           />
         </SwiperSlide>
       )) }
