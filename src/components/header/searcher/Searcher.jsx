@@ -51,7 +51,7 @@ function Searcher() {
 
   return (
     <div className="searcher-container">
-      <img src="../src/images/search.png" alt="lupa" className="searcher-icon" />
+      <img src="../../../assets/img/search.png" alt="lupa" className="searcher-icon" />
       <input
         type="text"
         value={query}
