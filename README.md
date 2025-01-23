@@ -117,22 +117,25 @@ This project is a **responsive movie app** inspired by Filmin, designed to showc
 
 
 ## 📸 Screenshots
-*(Add a screenshot of the app or webpage here for visual reference)*
+
 
 <br>
 <hr>
 
 ## 🚀 Technologies Used:
-- **React**: For building the user interface.
-- **TMDb API**: For fetching and displaying movie data.
-- **CSS**: For styling and design.
+- **React**: for building the user interface.
+- **React play**: for multimedia.
+- **Swiper**: for the slider and carousels.
+- **CSS**: for styling and design.
+- **TMDb API**: for fetching and displaying movie data.
+
 
 <br>
 
 ## 🛠️ Tools:
 - **Visual Studio Code**
 - **Git/GitHub**
-- **Jira**: For task management and project collaboration.
+- **Jira**: for task management and project collaboration.
 - **Figma**: for atom designs and mockups.
 - **draw.io**: for user flow diagram.
 
@@ -280,22 +283,24 @@ Este proyecto es una **aplicación de películas** inspirada en Filmin, diseñad
 <hr>
 
 ## 📸 Capturas de Pantalla
-*(Agrega aquí una captura de pantalla de la aplicación o página web como referencia visual)*
+
 
 <br>
 <hr>
 
 ## 🚀 Tecnologías Utilizadas:
-- **React**: Para construir la interfaz de usuario.
-- **API de TMDb**: Para obtener y mostrar datos de películas.
-- **CSS**: Para estilos y diseño.
+- **React**: para construir la interfaz de usuario.
+- **ReactPlay**: Para multimedia.
+- **Swiper**: para el slider y los carruseles.
+- **CSS**: para estilos y diseño.
+- **API de TMDb**: para obtener y mostrar datos de películas.
 
 <br>
 
 ## 🛠️ Herramientas:
 - **Visual Studio Code**
 - **Git/GitHub**
-- **Jira**: Para gestión de tareas y colaboración en el proyecto.
+- **Jira**: para gestión de tareas y colaboración en el proyecto.
 - **Figma**: para diseño de átomos y maquetación.
 - **draw.io**: para el diagrama de flujo de usuario.
 
