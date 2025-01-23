@@ -14,7 +14,7 @@
 .footerSection {
     background-color: #060613;
     color: #93959c;
-    padding: 20px 40px 30px 50px;
+    padding: 20px 40px 10px 50px;
     margin-top: auto; 
     display: flex;
     flex-direction: column;
@@ -100,7 +100,7 @@
 }
 
 .downLogos {
-    height: 40px;
+    height: 30px;
     width: auto;
     filter: brightness(0.8);
     transition: filter 0.2s ease;
