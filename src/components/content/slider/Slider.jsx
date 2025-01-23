@@ -32,10 +32,6 @@ useEffect(() =>{
   loadMedia();
 },[]);
 
- 
-
-// Mientras carga o si hay error, mostramos mensajes adecuados  
-
 if(loading) return <p>Cargando datos...</p>;
 if(error) return <p>{error}</p>;
 
@@ -49,7 +45,7 @@ return(
       delay: 3000,
       disableOnInteraction: false,
     }}
-    loop={mediaItems.length > 1} // Solo activa el loop si hay más de un slide    
+    loop={mediaItems.length > 1} 
     slidesPerView={1}    
     >
       {mediaItems.map((media)=> (
