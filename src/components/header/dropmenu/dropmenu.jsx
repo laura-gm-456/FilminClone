@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./dropmenu.css";
+import downArrow from "../../../assets/img/downArrow.png";
 
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isActive, setIsActive] = useState(false); // Estado para manejar el color del botón
+  const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    setIsActive(!isActive); // Cambia el estado de activo
+    setIsActive(!isActive);
   };
 
   return (
@@ -16,7 +17,7 @@ const DropdownMenu = () => {
         className={`dropdown__toggle ${isActive ? "active" : ""}`}
         onClick={toggleMenu}
       >
-        Más
+        Más <img src={ downArrow } alt="arrow-down" className="arrow-icon"/>
       </button>
       {isOpen && (
         <ul className="dropdown__menu">
