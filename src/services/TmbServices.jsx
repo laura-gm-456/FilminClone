@@ -28,16 +28,21 @@ async function getData(endpoint, params = {}){
 };
 
 
-function getProductById(productType, productId, params={}) {
-  
+function getProductById(productType, productId, params={}) {  
   return getData(`/${productType}/${productId}`, {append_to_response:params});
 }
+
 function getProductsByList(productType, productList) {
   return getData(`/${productType}/${productList}`);
 }
 
-function getProductsByTrendy(productType, time='week'){
-  return getData(`/trending/${productType}/${time}`);
-}
+function getProductsByTrendy(productType = 'all', time='week'){
+  return getData(`/trending/${productType}/${time}`);}
 
-export { getData, getProductById, getProductsByList, getProductsByTrendy };
+
+ // Generar URL de imágenes
+function getImageUrl(path, size = "w500") {
+  return path ? `https://image.tmdb.org/t/p/${size}${path}` : "url_de_imagen_predeterminada";
+} 
+
+export { getData, getProductById, getProductsByList, getProductsByTrendy, getImageUrl };
