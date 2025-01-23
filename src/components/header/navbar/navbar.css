@@ -60,7 +60,6 @@ body {
 
 /* Fondo de la página para mostrar la imagen */
 body {
-  background-image: url('ruta/a/tu/imagen-de-fondo.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
