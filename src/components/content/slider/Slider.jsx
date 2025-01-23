@@ -32,13 +32,7 @@ useEffect(() =>{
   loadMedia();
 },[]);
 
- // Función para manejar el tráiler
- const handlePlayTrailer = (id, mediaType) => {
-  const selectedMedia = mediaItems.find((item) => item.id === id);
-  if (selectedMedia) {
-    setActiveTrailer({ id, mediaType, director: selectedMedia.director || "Varios Directores" });
-  }
-};
+ 
 
 // Mientras carga o si hay error, mostramos mensajes adecuados  
 
@@ -52,7 +46,7 @@ return(
     navigation 
     pagination ={{clickable: true}}
     autoplay = {{
-      delay: 3000,
+      delay: 300000,
       disableOnInteraction: false,
     }}
     loop={mediaItems.length > 1} // Solo activa el loop si hay más de un slide    
@@ -62,8 +56,7 @@ return(
         <SwiperSlide key={media.id}>
           <SliderCard 
           media={media}
-          isActive={activeTrailer?.id === media.id}
-          onPlayTrailer={() => handlePlayTrailer(media.id, media.media_type)}
+          isActive={activeTrailer?.id === media.id}          
           />
         </SwiperSlide>
       )) }
