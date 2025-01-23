@@ -1,15 +1,18 @@
+import './App.css'
+import Footer from './components/footer/Footer'
 import React from "react";
-import Navbar from "./components/header/navbar";
+import Navbar from "./components/header/navbar/navbar";
 
-const App = () => {
-  return (
-    <div>
-      <Navbar />
-      <main style={{ marginTop: "60px" }}>
-        {/* Aquí va el resto de la página */}
-      </main>
-    </div>
-  );
+function App() {
+    return (
+    <>
+    <Navbar />
+   
+    <Footer />
+    </>
+  )
 };
+
+
 
 export default App;

@@ -1,4 +1,3 @@
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -18,16 +17,17 @@
 .dropdown__toggle:hover,
 .dropdown__toggle.active,
 .dropdown__toggle:focus {
-  outline: none; 
+  outline: none;
 }
-.dropdown__toggle:hover, .dropdown__toggle.active {
+.dropdown__toggle:hover,
+.dropdown__toggle.active {
   color: #02ffa1;
 }
 
 /* Menú desplegable */
 .dropdown__menu {
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
   background-color: #141426;
   border: 1px solid #333;
