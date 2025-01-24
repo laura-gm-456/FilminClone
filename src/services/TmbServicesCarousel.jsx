@@ -11,10 +11,6 @@ const filters = {
   romantic: { 
     with_genres: '10749' 
   },
-  
-  darkComedy: { 
-    with_keywords: 'satire,dark-comedy'
-  },
 };
   
   function getFamilyFriendly(params = {}) {
@@ -28,12 +24,8 @@ const filters = {
     return getFilterCarrusel({ ...filters.romantic, ...params });
   }
   
-  function getDarkComedy(params = {}) {
-    return getFilterCarrusel({ ...filters.darkComedy, ...params });
-  }
   export {
     getFamilyFriendly,
     getAnimated,
     getRomantic,
-    getDarkComedy,
   }

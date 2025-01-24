@@ -5,7 +5,6 @@ import {
   getFamilyFriendly,
   getAnimated,
   getRomantic,
-  getDarkComedy
 } from '../../services/TmbServicesCarousel'
 
 function Content() {
@@ -15,7 +14,6 @@ function Content() {
       <Carousel title="Maravillas para Ver con los Peques" fetchFunction={getFamilyFriendly} />
       <Carousel title="Cine de Animación" fetchFunction={getAnimated} />
       <Carousel title="Historias de Amor" fetchFunction={getRomantic} />
-      <Carousel title="Comedias Oscuras" fetchFunction={getDarkComedy} />
     </>
   )
 }

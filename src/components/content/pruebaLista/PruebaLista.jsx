@@ -11,6 +11,7 @@ import './PruebaLista.css'
 import { getImageUrl } from '../../../services/TmbServices'; 
 
 function Carousel({ title, fetchFunction }) {
+    console.log(title)
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -33,6 +34,7 @@ function Carousel({ title, fetchFunction }) {
     
   return (
     <>
+    <h2 className="carousel-title">{title}</h2>
     <Swiper
       modules={[Navigation]}
       navigation 
@@ -45,7 +47,6 @@ function Carousel({ title, fetchFunction }) {
         
         {products.map((product) => (
             <>
-            <h2 className="carousel-title">{title}</h2>
           <SwiperSlide key={product.id} className="carousel-movie-card">            
                 <ProductCard key={product.id} id={product.id} type={"movie"} />         
           </SwiperSlide>
