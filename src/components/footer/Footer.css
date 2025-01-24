@@ -10,18 +10,16 @@
     flex-direction: column;
 }
 
-
 .footerSection {
     background-color: #060613;
     color: #93959c;
-    padding: 20px 40px 30px 50px;
-    margin-top: auto; 
+    padding: 20px 40px 10px 50px;
+    margin-top: 0; 
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     gap: 10px;
 }
-
 
 .line {
     border: none;
@@ -54,7 +52,6 @@
     font-size: 12px;
     font-weight: bold;
     transition: color 0.3s;
-
 }
 
 .upperLinks a:hover {
@@ -100,7 +97,7 @@
 }
 
 .downLogos {
-    height: 40px;
+    height: 30px;
     width: auto;
     filter: brightness(0.8);
     transition: filter 0.2s ease;
@@ -116,7 +113,6 @@
     text-align: right;
     font-size: 12px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 @media (max-width: 768px) {
