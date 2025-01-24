@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './Slider.css';
+import { Link } from "react-router-dom";
 
 
 function Tags({ media }) {
@@ -36,14 +37,21 @@ function SliderCard({ media }) {
       <div className="slider-card-content">       
         <Tags media={media} />        
         <h3 className="slider-title">{media.title || media.name}</h3>
-        <Subtitle media={media} />   
+      
+        <Subtitle media={media} />  
+        
         <button
-          className="slider-button"> Ver Ahora </button>
+          className="slider-button"
+          onClick={() => onPlayTrailer(media.id, media.media_type)}
+        > <Link to="/construction" target="_blank">
+          Ver Ahora 
+        </Link>
+        </button>
+
       </div>
     </div>
   );
 }
-
 
 SliderCard.propTypes = {
   media: PropTypes.shape({
