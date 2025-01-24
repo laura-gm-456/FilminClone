@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import './Slider.css';
 import { Link } from "react-router-dom";
 
-// Función para renderizar las etiquetas dinámicas
+
 function Tags({ media }) {
   return (
     <div className="tags">
@@ -16,16 +16,16 @@ function Tags({ media }) {
   );
 }
 
-// Función para renderizar el subtítulo dinámico
+
 function Subtitle({ media }) {
   if (media.media_type === 'movie') {
     return <p className="slider-subtitle">{media.director || 'Director desconocido'}</p>;
   }
-  return null; // No mostrar subtítulo para TV
+  return null; 
 }
 
-// Componente principal de la tarjeta
-function SliderCard({ media, onPlayTrailer }) {
+
+function SliderCard({ media }) {
   return (
     <div
       className="slider-card"
@@ -33,20 +33,12 @@ function SliderCard({ media, onPlayTrailer }) {
         backgroundImage: `url(https://image.tmdb.org/t/p/original${media.backdrop_path})`,
       }}
     >
-      {/* Capa oscura para el fondo */}
       <div className="slider-overlay"></div>
-
-      <div className="slider-card-content">
-        {/* Renderiza los tags */}
-        <Tags media={media} />
-
-        {/* Título de la película o serie */}
+      <div className="slider-card-content">       
+        <Tags media={media} />        
         <h3 className="slider-title">{media.title || media.name}</h3>
-
-        {/* Renderiza el subtítulo dinámico */}
-        <Subtitle media={media} />
-
-        {/* Botón para ver más detalles o el tráiler */}
+      
+        <Subtitle media={media} />  
         
         <button
           className="slider-button"
@@ -55,13 +47,12 @@ function SliderCard({ media, onPlayTrailer }) {
           Ver Ahora 
         </Link>
         </button>
+
       </div>
     </div>
   );
 }
 
-
-// Validación de propiedades con PropTypes
 SliderCard.propTypes = {
   media: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -71,8 +62,7 @@ SliderCard.propTypes = {
     media_type: PropTypes.oneOf(['movie', 'tv']).isRequired,
     director: PropTypes.string,
     seasons: PropTypes.number,
-  }).isRequired,
-  onPlayTrailer: PropTypes.func.isRequired,
+  }).isRequired,  
 };
 
 Tags.propTypes = {
