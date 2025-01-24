@@ -1,12 +1,21 @@
 
 import Slider from './slider/Slider'
-import PruebaLista from './pruebaLista/PruebaLista'
+import Carousel from './pruebaLista/PruebaLista'
+import {
+  getFamilyFriendly,
+  getAnimated,
+  getRomantic,
+  getDarkComedy
+} from '../../services/TmbServicesCarousel'
 
 function Content() {
   return (
     <>
     <Slider />
-    <PruebaLista />
+      <Carousel title="Maravillas para Ver con los Peques" fetchFunction={getFamilyFriendly} />
+      <Carousel title="Cine de Animación" fetchFunction={getAnimated} />
+      <Carousel title="Historias de Amor" fetchFunction={getRomantic} />
+      <Carousel title="Comedias Oscuras" fetchFunction={getDarkComedy} />
     </>
   )
 }

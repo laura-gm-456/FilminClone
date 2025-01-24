@@ -3,7 +3,7 @@ import { getProductById } from "./TmbServices";
 
 export async function getModalData(productType, productId){
     try {
-        const data=await getProductById(productType, productId, "videos,release_dates,content_ratings,season/1");
+        const data=await getProductById(productType, productId, "videos,release_dates,content_ratings");
         const {
             overview,
             genres,
@@ -37,7 +37,7 @@ export async function getModalData(productType, productId){
             product.voteRating >=7 && product.voteRating <9 ? "Genial":
             "Excelente";
         const minutes = () => {
-            const timmer=data.runtime || data["season/1"].episodes[0].runtime;
+            const timmer=data.runtime || 0;
             const hours = Math.floor(timmer / 60);
             const restMinutes = timmer % 60; 
             return hours ? `${hours}h ${restMinutes}min` : `${restMinutes}min`;

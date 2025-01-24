@@ -44,5 +44,12 @@ function getProductsByTrendy(productType = 'all', time='week'){
 function getImageUrl(path, size = "w500") {
   return path ? `https://image.tmdb.org/t/p/${size}${path}` : "url_de_imagen_predeterminada";
 } 
-
-export { getData, getProductById, getProductsByList, getProductsByTrendy, getImageUrl };
+function getFilterCarrusel(filterParams = {}, type = 'movie') {
+  const defaultParams = {
+    sort_by: 'popularity.desc', // Orden por defecto
+    page: 1, // Página por defecto
+  };
+  const finalParams = { ...defaultParams, ...filterParams };
+  return getData(`/discover/${type}`, finalParams);
+}
+export { getData, getProductById, getProductsByList, getProductsByTrendy, getImageUrl, getFilterCarrusel};
