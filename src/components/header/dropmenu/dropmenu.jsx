@@ -21,8 +21,8 @@ const DropdownMenu = () => {
       </button>
       {isOpen && (
         <ul className="dropdown__menu">
-          <li><a href="#paginaenconstruccion">Novedades</a></li>
-          <li><a href="#paginaenconstruccion">Próximamente</a></li>
+          <li><a href="/construction.html">Novedades</a></li>
+          <li><a href="/construction.html">Próximamente</a></li>
           <li className="the-filmin-times">
             <a href="https://www.thefilmintimes.com/es/" target="_blank">The Filmin Times</a>
           </li>
