@@ -1,6 +1,6 @@
 
 import Slider from './slider/Slider'
-import Carousel from './pruebaLista/PruebaLista'
+import Carousel from './pruebaLista/Carousel'
 import {
   getFamilyFriendly,
   getAnimated,
