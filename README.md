@@ -117,7 +117,9 @@ This project is a **responsive movie app** inspired by Filmin, designed to showc
 
 
 ## 📸 Screenshots
+
 ![](https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22screenshot_1[…]~~Gv-TOs67P5qyLMUD6lpxLrn9g9SFo~plBRT7oAETzR1J9ouNZBXFA__%22%7D)
+
 ![](https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22Screenshot%2[…]iggyF2G2y3MyyxSLXyi-vhmbAQgObDEOZiNykH7a7X26zZp02xXB8Qg__%22%7D)
 
 <br>
@@ -284,7 +286,9 @@ Este proyecto es una **aplicación de películas** inspirada en Filmin, diseñad
 <hr>
 
 ## 📸 Capturas de Pantalla
+
 ![](https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22screenshot_1[…]~~Gv-TOs67P5qyLMUD6lpxLrn9g9SFo~plBRT7oAETzR1J9ouNZBXFA__%22%7D)
+
 ![](https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22Screenshot%2[…]iggyF2G2y3MyyxSLXyi-vhmbAQgObDEOZiNykH7a7X26zZp02xXB8Qg__%22%7D)
 
 <br>
