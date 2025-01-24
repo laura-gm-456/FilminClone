@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import "./dropmenu.css";
 import downArrow from "../../../assets/img/downArrow.png";
 
-import React, { useState } from "react";
-import "./dropmenu.css";
-import downArrow from "../../../assets/img/downArrow.png";
-
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
