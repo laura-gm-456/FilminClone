@@ -42,8 +42,8 @@ function getImageUrl(path, size = "w500") {
 } 
 function getFilterCarrusel(filterParams = {}, type = 'movie') {
   const defaultParams = {
-    sort_by: 'popularity.desc', // Orden por defecto
-    page: 1, // Página por defecto
+    sort_by: 'popularity.desc', 
+    page: 1,
   };
   const finalParams = { ...defaultParams, ...filterParams };
   return getData(`/discover/${type}`, finalParams);

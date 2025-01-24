@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: Montserrat, sans-serif;
-    min-height: 100vh; 
     display: flex;
     box-sizing: border-box;
     width: 100%;
@@ -14,7 +13,7 @@
     background-color: #060613;
     color: #93959c;
     padding: 20px 40px 10px 50px;
-    margin-top: 0; 
+    margin-top: 20px; 
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
