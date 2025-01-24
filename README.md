@@ -118,9 +118,9 @@ This project is a **responsive movie app** inspired by Filmin, designed to showc
 
 ## 📸 Screenshots
 
-![](https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22screenshot_1[…]~~Gv-TOs67P5qyLMUD6lpxLrn9g9SFo~plBRT7oAETzR1J9ouNZBXFA__%22%7D)
+![](https://imagekit.io/tools/asset-public-link/?detail=%7B%22name%22%3A%22screenshot_1737713352645.png%22%2C%22type%22%3A%22image%2Fpng%22%2C%22signedurl_expire%22%3A%222028-01-24T10%3A09%3A15.715Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2F%2F662854a1f2a04099%2Fscreenshot_1737713352645.png%3FExpires%3D1832321356%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3DI5DD34n-mgYZbd5aAUf18eB2jn5Zynq0w0hvzi3OE3Z8d4s35GJtKQjkc6jqQzi7cgWk~kUUGEos0v-D0ajlq0cZQwqXh9POR3DGRcdgKeuS~ts36o-ocsXM9njZlwoRbx8qxfp~G4mj3Udtn-1jzM4QUNEWX43gLapnxhgWK2ArS0Rt5zVxxZnmLojR8qbUBs-0GjkYGx8abkukITnqZ1woL-PQNUueDJ8zPsj3ICbfLLUE3yFFOkvPE4JcG4b09EafN1JC1y4cBN152--A~7VNkYiXk40~~Gv-TOs67P5qyLMUD6lpxLrn9g9SFo~plBRT7oAETzR1J9ouNZBXFA__%22%7D)
 
-![](https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22Screenshot%2[…]iggyF2G2y3MyyxSLXyi-vhmbAQgObDEOZiNykH7a7X26zZp02xXB8Qg__%22%7D)
+![](https://imagekit.io/tools/asset-public-link/?detail=%7B%22name%22%3A%22Screenshot%202025-01-24%20105710.png%22%2C%22type%22%3A%22image%2Fpng%22%2C%22signedurl_expire%22%3A%222028-01-24T10%3A10%3A34.814Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2F%2F072c4b9fb84b402b%2FScreenshot%25202025-01-24%2520105710.png%3FExpires%3D1832321435%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3DHIyDYEihELQwuCmh9gtzhfPKe8zKEFbGvPz7p6ecJIhtf9CF6-odizRrdCzOBk9s8rEAsfOX2g8~RL8u8KbtlWOycsGbMLN9x1mZxQrMa0cm0kArQ-hlmsctqJssd1p9qLdR3wB1c5bLqZZRP2F16rQMlN~99s9vYyqOaAQvPJyDu-2stCenemoMHAq5-iCN2IoGr9fXh6qgIULbWFwzW5L5Vsh1w4kD7wWOpm9CRoEVF~1P8vgGzfe8x3iBl6SzYx78rLX-ZNnY~zmsLBCFpdmVkcFPerTiggyF2G2y3MyyxSLXyi-vhmbAQgObDEOZiNykH7a7X26zZp02xXB8Qg__%22%7D)
 
 <br>
 <hr>
