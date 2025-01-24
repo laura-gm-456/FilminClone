@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./dropmenu.css";
 import downArrow from "../../../assets/img/downArrow.png";
 
+import React, { useState } from "react";
+import "./dropmenu.css";
+import downArrow from "../../../assets/img/downArrow.png";
+
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -21,8 +25,8 @@ const DropdownMenu = () => {
       </button>
       {isOpen && (
         <ul className="dropdown__menu">
-          <li><a href="#paginaenconstruccion">Novedades</a></li>
-          <li><a href="#paginaenconstruccion">Próximamente</a></li>
+          <li><a href="/construction.html">Novedades</a></li>
+          <li><a href="/construction.html">Próximamente</a></li>
           <li className="the-filmin-times">
             <a href="https://www.thefilmintimes.com/es/" target="_blank">The Filmin Times</a>
           </li>
