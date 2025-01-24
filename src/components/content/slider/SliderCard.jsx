@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './Slider.css';
+import { Link } from "react-router-dom";
 
 // Función para renderizar las etiquetas dinámicas
 function Tags({ media }) {
@@ -46,16 +47,19 @@ function SliderCard({ media, onPlayTrailer }) {
         <Subtitle media={media} />
 
         {/* Botón para ver más detalles o el tráiler */}
+        
         <button
           className="slider-button"
           onClick={() => onPlayTrailer(media.id, media.media_type)}
-        >
-          Ver Ahora
+        > <Link to="/construction" target="_blank">
+          Ver Ahora 
+        </Link>
         </button>
       </div>
     </div>
   );
 }
+
 
 // Validación de propiedades con PropTypes
 SliderCard.propTypes = {

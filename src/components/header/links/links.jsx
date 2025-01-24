@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DropdownMenu from "../dropmenu/dropmenu";
 
 const Links = () => {
   return (
     <nav className="navbar__links">
-      <a href="/">Inicio</a>
-      <a href="/construction.html">Cine</a>
-      <a href="/construction.html">Series</a>
+      <Link to="/">Inicio</Link>
+      <Link to="/construction" target="_blank">Cine</Link>
+      <Link to="/construction" target="_blank">Series</Link>
       <DropdownMenu />
     </nav>
   );
