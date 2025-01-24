@@ -7,11 +7,10 @@ import 'swiper/swiper-bundle.css';
 import PropTypes from 'prop-types';
 import { getProductsByList } from '../../../services/TmbServices';
 import ProductCard from '../productCard/ProductCard';
-import './PruebaLista.css'
+import './Carousel.css'
 import { getImageUrl } from '../../../services/TmbServices'; 
 
 function Carousel({ title, fetchFunction }) {
-    console.log(title)
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -28,7 +27,6 @@ function Carousel({ title, fetchFunction }) {
         }
         fetchProduct();
     }, [fetchFunction]); 
-    console.log(products);
     if (!products) return;
 
     
@@ -47,7 +45,7 @@ function Carousel({ title, fetchFunction }) {
         
         {products.map((product) => (
             <>
-          <SwiperSlide key={product.id} className="carousel-movie-card">            
+          <SwiperSlide key={`container${product.id}`} className="carousel-movie-card">            
                 <ProductCard key={product.id} id={product.id} type={"movie"} />         
           </SwiperSlide>
           </>
