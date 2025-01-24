@@ -45,7 +45,7 @@ function Carousel({ title, fetchFunction }) {
         
         {products.map((product) => (
             <>
-            <p>{product.title}</p>
+            <h2 className="carousel-title">{title}</h2>
           <SwiperSlide key={product.id} className="carousel-movie-card">            
                 <ProductCard key={product.id} id={product.id} type={"movie"} />         
           </SwiperSlide>
