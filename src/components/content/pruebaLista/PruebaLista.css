@@ -1,0 +1,9 @@
+
+
+.carouselSwiper{
+    overflow: visible;
+    z-index: 1;
+}
+body{
+    overflow-x: hidden;
+}
