@@ -52,11 +52,3 @@
 .navbar__perfil {
   border-radius: 50%;
 }
-
-/* Fondo de la página para mostrar la imagen */
-body {
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-}

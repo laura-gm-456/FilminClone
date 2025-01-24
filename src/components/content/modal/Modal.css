@@ -1,0 +1,111 @@
+.modal{
+    position: fixed; 
+    width: 344px;
+    background-color: #242432;
+    border-radius: 0.5rem;
+    overflow: auto;
+    position:absolute; 
+    z-index: 9999; 
+    top:-30%;
+    left:-50%;
+
+
+}
+.divVideo, .divImage{
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10000; 
+}
+.divVideo > div > div{
+    height: 200% !important;
+    width: 140% !important;
+    position: relative;
+    top: -68%;
+    left: -20%;
+}
+.divVideo{
+    display: none;
+}
+.divImage > img{
+    width: fit-content;
+    object-fit: cover;
+    width: 100%;
+    min-height: 100%;
+}
+button{
+    background-color: #02FFA1;
+    color: #070613;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 1rem;
+    justify-content: space-between;
+    border-radius: 0.3rem;
+    border: none;
+}
+button:hover{
+    background-color: #4effbe;
+}
+p{
+    margin: 0;
+    padding: 0.1rem 0.2rem ;
+}
+.modalInfo{
+    z-index: 9999; 
+    text-align: start;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
+.modalTextBold{
+    font-size: 1rem;
+    font-weight: 800;
+}
+.modalInfoVotes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+.containerRating p{
+    padding: 0.5rem 0.2rem;
+    border: 2px solid #93959C; 
+    border-radius: 5px;
+}
+.containerVotes{
+    display: flex;
+    flex-direction: column;
+}
+.modalData{
+    display:flex;
+    margin: 0.5rem 0;
+}
+.modalCertification{
+    padding: 0.2rem 0.6rem;
+    background-color: #5d606b;
+    margin: 0 1rem;
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+}
+.modalGenre{
+    display:flex;
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+.modalGenre p{
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 0.2rem;
+}
+.modalInfoContent{
+    margin: 1rem 0;
+}
+.prettyerDiv{
+    position: absolute;
+    height: 4vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, transparent 0, RGBA(6, 6, 19, 0.03) 7%, RGBA(6, 6, 19, 0.11) 21%, RGBA(6, 6, 19, 0.61) 77%, RGBA(6, 6, 19, 0.75));
+    background-repeat: no-repeat;
+}
